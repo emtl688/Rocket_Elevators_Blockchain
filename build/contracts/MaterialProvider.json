@@ -1,0 +1,574 @@
+{
+  "contractName": "MaterialProvider",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "elevator_shaft",
+          "type": "uint256"
+        }
+      ],
+      "name": "calculMaterial",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"elevator_shaft\",\"type\":\"uint256\"}],\"name\":\"calculMaterial\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/marie/Desktop/Rocket-Elevator-BlockChain/Rocket_Elevators_Blockchain/contracts/MaterialProvider.sol\":\"MaterialProvider\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/marie/Desktop/Rocket-Elevator-BlockChain/Rocket_Elevators_Blockchain/contracts/MaterialProvider.sol\":{\"keccak256\":\"0x3f0478ef57639592f017d7aada087ce6383fbcc22c1437f05f585ed0bbf4f114\",\"urls\":[\"bzz-raw://5bf4e8a54b7fa7a05fdefa3e53db1ed127460734432700396a25a0a137a697c0\",\"dweb:/ipfs/QmNzQ2S76zKkBNv4KCFjHp8VGzoUWmTtUDFvj8Wyg594Va\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610170806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063a123c33e1461003b578063f1d21ac8146100a9575b600080fd5b6100676004803603602081101561005157600080fd5b81019080803590602001909291905050506100ef565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100d5600480360360208110156100bf57600080fd5b810190808035906020019092919050505061012b565b604051808215151515815260200191505060405180910390f35b600081815481106100fc57fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080829050600191505091905056fea265627a7a723158202ebd7ef73171c625afb8591224a5cd8b33302fdfc21b9b9433c278b18b1a06b564736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063a123c33e1461003b578063f1d21ac8146100a9575b600080fd5b6100676004803603602081101561005157600080fd5b81019080803590602001909291905050506100ef565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100d5600480360360208110156100bf57600080fd5b810190808035906020019092919050505061012b565b604051808215151515815260200191505060405180910390f35b600081815481106100fc57fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080829050600191505091905056fea265627a7a723158202ebd7ef73171c625afb8591224a5cd8b33302fdfc21b9b9433c278b18b1a06b564736f6c63430005100032",
+  "sourceMap": "27:1529:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:1529:0;;;;;;;",
+  "deployedSourceMap": "27:1529:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:1529:0;;;;;;;;;;;;;;;;;;;;;;;;62:22;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;62:22:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;93:143;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;93:143:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;62:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;93:143::-;153:4;170:19;192:14;170:36;;224:4;217:11;;;93:143;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract MaterialProvider {\r\n\r\n    address[] public owner;\r\n\r\n    function calculMaterial(uint elevator_shaft) public returns(bool) {\r\n        uint aluminium_bars = elevator_shaft;\r\n        return true;\r\n    }\r\n    \r\n\r\n    // constructor(aluminum_bars, stainless_steel_sheets, springs_and_hardware, bumper_rubber_bands, interior_light_bulbs, display_LEDs) {\r\n    //     owner = msg.sender; // 'msg.sender' is sender of current call, contract deployer for a constructor\r\n    //     // this.aluminum_bars = aluminum_bars;\r\n    //     // this.stainless_steel_sheets = stainless_steel_sheets;\r\n    //     // this.springs_and_hardware = springs_and_hardware;\r\n    //     // this.bumper_rubber_bands = bumper_rubber_bands;\r\n    //     // this.interior_light_bulbs = interior_light_bulbs;\r\n    //     // this.display_LEDs = display_LEDs;\r\n\r\n    //     function calculMaterial(elevator_shaft, controller, door, button, display) private {\r\n        \r\n    //         // aluminium_bars = (elevator_shaft * 1) + (door * 2);\r\n    //         // stainless_steel_sheets = (door * 4) + (controller * 1); \r\n    //         // springs_and_hardware = (elevator_shaft * 2) + ();\r\n    //         // bumper_rubber_bands = (door * 2);\r\n    //         // interior_light_bulbs = (elevator_shaft * 2);\r\n    //         // display_LEDs = (elevator_shaft * 2) + display;\r\n\r\n        \r\n        \r\n    //     }\r\n\r\n    // }\r\n\r\n\r\n    //Retrieving the adopters\r\n    // function getOwner() public view returns (address[] memory) {\r\n    //     return owner;\r\n    // }\r\n}",
+  "sourcePath": "C:/Users/marie/Desktop/Rocket-Elevator-BlockChain/Rocket_Elevators_Blockchain/contracts/MaterialProvider.sol",
+  "ast": {
+    "absolutePath": "/C/Users/marie/Desktop/Rocket-Elevator-BlockChain/Rocket_Elevators_Blockchain/contracts/MaterialProvider.sol",
+    "exportedSymbols": {
+      "MaterialProvider": [
+        19
+      ]
+    },
+    "id": 20,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 19,
+        "linearizedBaseContracts": [
+          19
+        ],
+        "name": "MaterialProvider",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 19,
+            "src": "62:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 2,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "62:7:0",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 3,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "62:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 17,
+              "nodeType": "Block",
+              "src": "159:77:0",
+              "statements": [
+                {
+                  "assignments": [
+                    12
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 12,
+                      "name": "aluminium_bars",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 17,
+                      "src": "170:19:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 11,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "170:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 14,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "id": 13,
+                    "name": "elevator_shaft",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6,
+                    "src": "192:14:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "170:36:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 15,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "224:4:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 10,
+                  "id": 16,
+                  "nodeType": "Return",
+                  "src": "217:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 18,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculMaterial",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6,
+                  "name": "elevator_shaft",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18,
+                  "src": "117:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "117:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "116:21:0"
+            },
+            "returnParameters": {
+              "id": 10,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18,
+                  "src": "153:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 8,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "153:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "152:6:0"
+            },
+            "scope": 19,
+            "src": "93:143:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 20,
+        "src": "27:1529:0"
+      }
+    ],
+    "src": "0:1556:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/marie/Desktop/Rocket-Elevator-BlockChain/Rocket_Elevators_Blockchain/contracts/MaterialProvider.sol",
+      "exportedSymbols": {
+        "MaterialProvider": [
+          19
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            19
+          ],
+          "name": "MaterialProvider",
+          "scope": 20
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "owner",
+              "scope": 19,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address[]",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "address[]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "62:7:0"
+                  }
+                ],
+                "id": 3,
+                "name": "ArrayTypeName",
+                "src": "62:9:0"
+              }
+            ],
+            "id": 4,
+            "name": "VariableDeclaration",
+            "src": "62:22:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "calculMaterial",
+              "scope": 19,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "elevator_shaft",
+                      "scope": 18,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 5,
+                        "name": "ElementaryTypeName",
+                        "src": "117:4:0"
+                      }
+                    ],
+                    "id": 6,
+                    "name": "VariableDeclaration",
+                    "src": "117:19:0"
+                  }
+                ],
+                "id": 7,
+                "name": "ParameterList",
+                "src": "116:21:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 18,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 8,
+                        "name": "ElementaryTypeName",
+                        "src": "153:4:0"
+                      }
+                    ],
+                    "id": 9,
+                    "name": "VariableDeclaration",
+                    "src": "153:4:0"
+                  }
+                ],
+                "id": 10,
+                "name": "ParameterList",
+                "src": "152:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        12
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "aluminium_bars",
+                          "scope": 17,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 11,
+                            "name": "ElementaryTypeName",
+                            "src": "170:4:0"
+                          }
+                        ],
+                        "id": 12,
+                        "name": "VariableDeclaration",
+                        "src": "170:19:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 6,
+                          "type": "uint256",
+                          "value": "elevator_shaft"
+                        },
+                        "id": 13,
+                        "name": "Identifier",
+                        "src": "192:14:0"
+                      }
+                    ],
+                    "id": 14,
+                    "name": "VariableDeclarationStatement",
+                    "src": "170:36:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 10
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "74727565",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "true"
+                        },
+                        "id": 15,
+                        "name": "Literal",
+                        "src": "224:4:0"
+                      }
+                    ],
+                    "id": 16,
+                    "name": "Return",
+                    "src": "217:11:0"
+                  }
+                ],
+                "id": 17,
+                "name": "Block",
+                "src": "159:77:0"
+              }
+            ],
+            "id": 18,
+            "name": "FunctionDefinition",
+            "src": "93:143:0"
+          }
+        ],
+        "id": 19,
+        "name": "ContractDefinition",
+        "src": "27:1529:0"
+      }
+    ],
+    "id": 20,
+    "name": "SourceUnit",
+    "src": "0:1556:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xEdD89D56B0660F68f76cd756d259B79f1D4ff6B6",
+      "transactionHash": "0x88c3227e7f73c8abd222e3888a1e5ccda31282f7cf8f17dbaa7a43095bc5e21e"
+    }
+  },
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-14T11:19:02.239Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
