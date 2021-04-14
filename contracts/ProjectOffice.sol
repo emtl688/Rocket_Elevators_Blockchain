@@ -7,6 +7,7 @@ contract ProjectOffice {
     address public customer;
 
     struct Components{
+    uint Id;
     uint ElevatorsShafts; // 8 = 2 columns * 4 elevators
     uint Controllers; // 1 = 1 per battery
     uint Buttons; //  25 = 5floors * 5 buttons
@@ -17,40 +18,58 @@ contract ProjectOffice {
     constructor() public {
         customer = msg.sender;
     }
+    uint orderId =1; 
 
     function set(uint Batteries, uint Columns, uint Elevators, uint Floors) public
-    {       
-        Components memory comp;
-        comp.ElevatorsShafts = Elevators * Columns;
-        comp.Controllers = Batteries;
-        comp.Buttons = (Floors * 5);
-        comp.Doors = Floors * Columns;
-        comp.Displays = Elevators * Columns;
-        component.push(comp);
+    {   
+        component.length++;
+        component[component.length-1].Id = orderId;
+        component[component.length-1].ElevatorsShafts = Elevators * Columns;
+        component[component.length-1].Controllers = Batteries;
+        component[component.length-1].Buttons = (Floors * 5);
+        component[component.length-1].Doors = Floors * Columns;
+        component[component.length-1].Displays = Elevators * Columns;
+        orderId++;
     }
 
-     function componentCount() public view returns(uint){
+    //   function addOrder(uint _shafts,uint _controllers,uint _buttons,uint _doors,uint _displays) public returns(uint)
+    // {   
+    //     component.length++;
+    //     component[component.length-1].ElevatorsShafts = _shafts;
+    //     component[component.length-1].Controllers = _controllers;
+    //     component[component.length-1].Buttons = _buttons;
+    //     component[component.length-1].Doors = _doors;
+    //     component[component.length-1].Displays = _displays;
+    //     return component.length;
+    // }
+
+      function componentCount() public view returns(uint){
         return component.length;
     }
 
-    function getElevatorsShafts(uint index) public view returns(uint){
-        return component[index].ElevatorsShafts;
+
+     function getId(uint Id) public view returns(uint){
+        return component[Id].Id;
     }
 
-    function getControllers(uint index) public view returns(uint){
-        return component[index].Controllers;
-    }
-    function getButtons(uint index) public view returns(uint){
-        return component[index].Buttons;
-    }
-    function getDoors(uint index) public view returns(uint){
-        return component[index].Doors;
-    }
-    function getDisplays(uint index) public view returns(uint){
-        return component[index].Displays;
+    function getElevatorsShafts(uint Id) public view returns(uint){
+        return component[Id].ElevatorsShafts;
     }
 
-     function get() public view returns(Components[] memory)
+    function getControllers(uint Id) public view returns(uint){
+        return component[Id].Controllers;
+    }
+    function getButtons(uint Id) public view returns(uint){
+        return component[Id].Buttons;
+    }
+    function getDoors(uint Id) public view returns(uint){
+        return component[Id].Doors;
+    }
+    function getDisplays(uint Id) public view returns(uint){
+        return component[Id].Displays;
+    }
+
+     function getComponent() public view returns(Components[] memory)
     {
         return component;
     }  
