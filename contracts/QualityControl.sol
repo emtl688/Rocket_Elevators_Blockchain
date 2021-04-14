@@ -1,42 +1,47 @@
-pragma solidity ^0.5.0;
-pragma experimental ABIEncoderV12;
+//SPDX-License-Identifier: MIT
+pragma solidity >=0.4.22 <0.8.0;
+pragma experimental ABIEncoderV2;
 
-import './SolutionManufacturing.sol'
-contract QualityControl{
-    struct Permit {
+import './SolutionManufacturing.sol';
+
+contract QualityControl {
+// peermit object
+    struct Permit{
         uint256 identifier;
         uint256 startDate;
         uint256 endDate;
+        //uint datetime // 1512220800
     }
-
+// product object
     struct Product{
         string name;
-        unint64 quantity;
-        bool verified:
-
+        uint64 quantity;
+        bool verified;
     }
+
     struct Verification{
         Permit certificate;
         Permit perm;
         Product[] mList;
     }
-    // Product[] mlist;
+    //Product[] mList;
     Verification v;
     uint64 index = 0;
 
-    function generatePermit() private view returns(Permit memory certificate){
+// filling the 
+    function createPermit() private view returns(Permit memory certificate){
         Permit memory p;
-        p.identifier= block.timestamp/2;
-        p.startDate = block.timestamp;
-        p.endDate = block.timestamp + 5*365;
+        p.identifier = block.timestamp/2;
+        p.startdate = block.timestamp;
+        p.enddate = block.timestamp + (10* 365 days);
         return p;
     }
 
     function VerificationStamp(address a) public{
-        v.certificate = generatePermit();
-        v.perm = generatePermit();
+        v.certificate = createPermit();
+        v.perm = createPermit();
         SolutionManufacturing.Product[] memory products = SolutionManufacturing(a).viewOrder();
-        for (index; index<products.length;index; index++){
+        for(index;index<products.length;index++){
             Product memory p;
             p.verified = true;
             p.name = products[index].Name;
@@ -44,8 +49,11 @@ contract QualityControl{
             v.mList.push(p);
         }
     }
-    function getVerification() public view returns(Verification memory) {
+
+    function getVerification() public view returns(Verification memory){
         return v;
     }
+
+
 
 }
