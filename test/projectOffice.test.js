@@ -14,8 +14,6 @@ contract('ProjectOffice', () => {
     });
 
     it("should set Shafts, Controllers, Buttons, Doors, Displays", async () =>{
-         
-        
         const result = await projectOffice.get(); //get the results
         console.log("Result :" + result);
 

@@ -29,17 +29,6 @@ contract ProjectOffice {
         component.push(comp);
     }
 
-     function addOrder(uint _shafts,uint _controllers,uint _buttons,uint _doors,uint _displays) public returns(uint)
-    {   
-        component.length++;
-        component[component.length-1].ElevatorsShafts = _shafts;
-        component[component.length-1].Controllers = _controllers;
-        component[component.length-1].Buttons = _buttons;
-        component[component.length-1].Doors = _doors;
-        component[component.length-1].Displays = _displays;
-        return component.length;
-    }
-
      function componentCount() public view returns(uint){
         return component.length;
     }
@@ -60,7 +49,6 @@ contract ProjectOffice {
     function getDisplays(uint index) public view returns(uint){
         return component[index].Displays;
     }
-
 
      function get() public view returns(Components[] memory)
     {
