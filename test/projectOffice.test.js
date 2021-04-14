@@ -12,7 +12,7 @@ contract('ProjectOffice', () => {
         assert(projectOffice.address !== '');
     });
 
-    it("should set the amount of components needed for the order", async () =>{
+    it("should set Shafts, Controllers, Buttons, Doors, Displays", async () =>{
         await projectOffice.set(1,2,4,5); // input of the user
         const result = await projectOffice.get(); //get the results
 
@@ -24,6 +24,6 @@ contract('ProjectOffice', () => {
     it (" should have elements in Components array", async() =>{
         const length = await projectOffice.length();
         console.log(length)
-        assert(length != 0)
+        assert(length != 1)
     });
 })

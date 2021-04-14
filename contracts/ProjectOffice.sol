@@ -10,6 +10,7 @@ pragma experimental ABIEncoderV2;
 contract ProjectOffice {
 
     Components[] public component;
+    address[] public customer;
 
     struct Components{
     uint64 ElevatorsShafts; // 8 = 2 columns * 4 elevators
@@ -18,6 +19,10 @@ contract ProjectOffice {
     uint64 Doors; // 10 =1 per floor * columns
     uint64 Displays; // 8 = 1 per elevator 
     }
+
+    // constructor(address customer) public{
+    //     customer = msg.sender;
+    // }
 
     function set(uint64 Batteries, uint64 Columns, uint64 Elevators, uint64 Floors) public
     {       
