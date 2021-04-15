@@ -1,0 +1,73 @@
+[33mcommit 5d8d2b4afff3349bce1ab303354e19b815447154[m[33m ([m[1;36mHEAD -> [m[1;32mmanufacturing[m[33m)[m
+Author: adriengobeil3 <adirengobeil3@gmail.com>
+Date:   Thu Apr 15 15:25:18 2021 -0400
+
+    before petshop
+
+[33mcommit 7915bf72b5599c135af722afbc82c6d782efd439[m
+Merge: 655a032 335fd68
+Author: adriengobeil3 <adirengobeil3@gmail.com>
+Date:   Thu Apr 15 13:20:58 2021 -0400
+
+    asd
+
+[33mcommit 655a03214cf9eb31e22e0e4a562d8f9d83831879[m[33m ([m[1;31morigin/manufacturing[m[33m)[m
+Author: adriengobeil3 <adirengobeil3@gmail.com>
+Date:   Thu Apr 15 12:14:14 2021 -0400
+
+    front end
+
+[33mcommit 335fd686279b76604f697cb716bb96f349395a92[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: emtl688 <ericpmoran1@gmail.com>
+Date:   Thu Apr 15 10:42:32 2021 -0400
+
+    HTML/JS pages for each contract
+
+[33mcommit f2473bc48e49aca777b2019d6567d73c275d5b9d[m
+Merge: 7fe7e48 6e6d07c
+Author: adriengobeil3 <adirengobeil3@gmail.com>
+Date:   Thu Apr 15 10:30:09 2021 -0400
+
+    Merge branch 'main' into manufacturing
+
+[33mcommit 6e6d07c877a69bbfcb58b5de321462b7d8343e34[m
+Author: emtl688 <ericpmoran1@gmail.com>
+Date:   Thu Apr 15 10:26:00 2021 -0400
+
+    Frontend nav bar / individual html pages
+
+[33mcommit d5247bf966e2db2929ee3c38d8fe037b09193384[m
+Author: emtl688 <ericpmoran1@gmail.com>
+Date:   Wed Apr 14 21:35:37 2021 -0400
+
+    Contracts added
+
+[33mcommit 7fe7e4891952db9c5f628d9fb83bc2099e90eaf8[m
+Author: adriengobeil3 <adirengobeil3@gmail.com>
+Date:   Wed Apr 14 09:28:15 2021 -0400
+
+    get by id instead of index
+
+[33mcommit fe04ced7283d8548f2d40d442b63261974e6f8ca[m
+Author: adriengobeil3 <adirengobeil3@gmail.com>
+Date:   Wed Apr 14 08:34:37 2021 -0400
+
+    smol fix
+
+[33mcommit f235fea9aa3ca2a5f458c7daad5ad0fc99dde530[m
+Author: adriengobeil3 <adirengobeil3@gmail.com>
+Date:   Wed Apr 14 08:32:51 2021 -0400
+
+    manufacturing contract
+
+[33mcommit 0a347478120c4e8a8f66f6c68d5df171dc963b46[m
+Author: emtl688 <ericpmoran1@gmail.com>
+Date:   Tue Apr 13 12:36:11 2021 -0400
+
+    Pet Shop Test Files
+
+[33mcommit d66d5a81c5b63ccdbc759f05ca9499bc602580ed[m
+Author: emtl688 <74794151+emtl688@users.noreply.github.com>
+Date:   Tue Apr 13 08:56:08 2021 -0400
+
+    Initial commit
