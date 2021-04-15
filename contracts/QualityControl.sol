@@ -3,7 +3,6 @@ pragma solidity ^0.5.0;
 contract QualityControl {
  
     struct Test {
-        uint id;
         bool door;
         bool cable;
         bool brake;
@@ -11,8 +10,7 @@ contract QualityControl {
         string certificate;
     }
     
-    uint nextId = 1;
-    Test newTest = Test(nextId, false, false, false, "", "");
+    Test newTest = Test(false, false, false, "", "");
    
     function validateDoor(bool isPassed) public {
         newTest.door = isPassed;
@@ -34,7 +32,7 @@ contract QualityControl {
         newTest.certificate = certificateNumber;
     }
     
-    function getTest() public view returns (uint, bool, bool, bool, string memory, string memory) {
-        return (newTest.id, newTest.door, newTest.cable, newTest.brake, newTest.perm, newTest.certificate);           
+    function getTest() public view returns (bool, bool, bool, string memory, string memory) {
+        return (newTest.door, newTest.cable, newTest.brake, newTest.perm, newTest.certificate);           
     }
 }
