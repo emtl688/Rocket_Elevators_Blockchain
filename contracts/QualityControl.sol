@@ -1,29 +1,40 @@
 pragma solidity ^0.5.0;
-pragma experimental ABIEncoderV2;
-
-
 
 contract QualityControl {
  
-
-    struct test{
-        bool Door;
-        bool Cable;
-        bool  Brake;
-        bool perm;
-        bool Certificate;
-
+    struct Test {
+        uint id;
+        bool door;
+        bool cable;
+        bool brake;
+        string perm;
+        string certificate;
     }
-   
     
-    function validateUnit(bool cabletest, bool braketest,bool doortest, bool perm, bool certificate) public returns (bool){
-        if (doortest == true && braketest == true && cabletest == true && perm == true  && certificate == true  ){
-            return true;
-        }
-        else {
-            return false;
-        }
+    uint nextId = 1;
+    Test newTest = Test(nextId, false, false, false, "", "");
+   
+    function validateDoor(bool isPassed) public {
+        newTest.door = isPassed;
     }
-
-
+    
+    function validateCable(bool isPassed) public {
+        newTest.cable = isPassed;
+    }
+    
+    function validateBrake(bool isPassed) public {
+        newTest.brake = isPassed;
+    }
+    
+    function addPermit(string memory permitNumber) public {
+        newTest.perm = permitNumber;
+    }
+    
+    function addCertificate(string memory certificateNumber) public {
+        newTest.certificate = certificateNumber;
+    }
+    
+    function getTest() public view returns (uint, bool, bool, bool, string memory, string memory) {
+        return (newTest.id, newTest.door, newTest.cable, newTest.brake, newTest.perm, newTest.certificate);           
+    }
 }
