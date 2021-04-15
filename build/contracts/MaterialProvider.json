@@ -1,0 +1,3178 @@
+{
+  "contractName": "MaterialProvider",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "elevator_shaft",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "controller",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "door",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "button",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "display",
+          "type": "uint64"
+        }
+      ],
+      "name": "calculMaterial",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "aluminum_bars",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "stainless_steel_sheets",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "springs_and_hardware",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "bumper_rubber_bands",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "interior_light_bulbs",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "display_LEDs",
+              "type": "uint64"
+            }
+          ],
+          "internalType": "struct MaterialProvider.Material",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "retrive",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "aluminum_bars",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "stainless_steel_sheets",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "springs_and_hardware",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "bumper_rubber_bands",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "interior_light_bulbs",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "display_LEDs",
+              "type": "uint64"
+            }
+          ],
+          "internalType": "struct MaterialProvider.Material",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"elevator_shaft\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"controller\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"door\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"button\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"display\",\"type\":\"uint64\"}],\"name\":\"calculMaterial\",\"outputs\":[{\"components\":[{\"internalType\":\"uint64\",\"name\":\"aluminum_bars\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"stainless_steel_sheets\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"springs_and_hardware\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"bumper_rubber_bands\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"interior_light_bulbs\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"display_LEDs\",\"type\":\"uint64\"}],\"internalType\":\"struct MaterialProvider.Material\",\"name\":\"\",\"type\":\"tuple\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"retrive\",\"outputs\":[{\"components\":[{\"internalType\":\"uint64\",\"name\":\"aluminum_bars\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"stainless_steel_sheets\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"springs_and_hardware\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"bumper_rubber_bands\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"interior_light_bulbs\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"display_LEDs\",\"type\":\"uint64\"}],\"internalType\":\"struct MaterialProvider.Material\",\"name\":\"\",\"type\":\"tuple\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/MaterialProvider.sol\":\"MaterialProvider\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/MaterialProvider.sol\":{\"keccak256\":\"0xa1957541d0bb1e1587e8d0dd5806eac71f2335a034313a3baa525eb284ff10ab\",\"urls\":[\"bzz-raw://d6212433fa747d0aba0686d3a064c9316cb526cb92cc3f4ecd745cb484d82f15\",\"dweb:/ipfs/QmaqMYFdmWLKkrAELmFBnZ3Sm3oPM6mQhwu2enYKeV5VnR\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610650806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063a037ff7a1461003b578063a6b7fc5b1461006b575b600080fd5b610055600480360361005091908101906104c6565b610089565b60405161006291906105c7565b60405180910390f35b6100736102f9565b60405161008091906105c7565b60405180910390f35b61009161043f565b6002840260018702016000800160006101000a81548167ffffffffffffffff021916908367ffffffffffffffff1602179055506001850260048502016000800160086101000a81548167ffffffffffffffff021916908367ffffffffffffffff160217905550600286026000800160106101000a81548167ffffffffffffffff021916908367ffffffffffffffff160217905550600284026000800160186101000a81548167ffffffffffffffff021916908367ffffffffffffffff160217905550826002870201600060010160006101000a81548167ffffffffffffffff021916908367ffffffffffffffff160217905550816002870201600060010160086101000a81548167ffffffffffffffff021916908367ffffffffffffffff16021790555060006040518060c00160405290816000820160009054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160089054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160109054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160189054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016001820160009054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016001820160089054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681525050905095945050505050565b61030161043f565b60006040518060c00160405290816000820160009054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160089054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160109054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160189054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016001820160009054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016001820160089054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681525050905090565b6040518060c00160405280600067ffffffffffffffff168152602001600067ffffffffffffffff168152602001600067ffffffffffffffff168152602001600067ffffffffffffffff168152602001600067ffffffffffffffff168152602001600067ffffffffffffffff1681525090565b6000813590506104c0816105f6565b92915050565b600080600080600060a086880312156104de57600080fd5b60006104ec888289016104b1565b95505060206104fd888289016104b1565b945050604061050e888289016104b1565b935050606061051f888289016104b1565b9250506080610530888289016104b1565b9150509295509295909350565b60c08201600082015161055360008501826105b8565b50602082015161056660208501826105b8565b50604082015161057960408501826105b8565b50606082015161058c60608501826105b8565b50608082015161059f60808501826105b8565b5060a08201516105b260a08501826105b8565b50505050565b6105c1816105e2565b82525050565b600060c0820190506105dc600083018461053d565b92915050565b600067ffffffffffffffff82169050919050565b6105ff816105e2565b811461060a57600080fd5b5056fea365627a7a72315820c27f3eec13471f88731152ea708eff45037f33305d4aa29cfd42b4ef005919e16c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063a037ff7a1461003b578063a6b7fc5b1461006b575b600080fd5b610055600480360361005091908101906104c6565b610089565b60405161006291906105c7565b60405180910390f35b6100736102f9565b60405161008091906105c7565b60405180910390f35b61009161043f565b6002840260018702016000800160006101000a81548167ffffffffffffffff021916908367ffffffffffffffff1602179055506001850260048502016000800160086101000a81548167ffffffffffffffff021916908367ffffffffffffffff160217905550600286026000800160106101000a81548167ffffffffffffffff021916908367ffffffffffffffff160217905550600284026000800160186101000a81548167ffffffffffffffff021916908367ffffffffffffffff160217905550826002870201600060010160006101000a81548167ffffffffffffffff021916908367ffffffffffffffff160217905550816002870201600060010160086101000a81548167ffffffffffffffff021916908367ffffffffffffffff16021790555060006040518060c00160405290816000820160009054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160089054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160109054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160189054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016001820160009054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016001820160089054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681525050905095945050505050565b61030161043f565b60006040518060c00160405290816000820160009054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160089054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160109054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016000820160189054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016001820160009054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681526020016001820160089054906101000a900467ffffffffffffffff1667ffffffffffffffff1667ffffffffffffffff1681525050905090565b6040518060c00160405280600067ffffffffffffffff168152602001600067ffffffffffffffff168152602001600067ffffffffffffffff168152602001600067ffffffffffffffff168152602001600067ffffffffffffffff168152602001600067ffffffffffffffff1681525090565b6000813590506104c0816105f6565b92915050565b600080600080600060a086880312156104de57600080fd5b60006104ec888289016104b1565b95505060206104fd888289016104b1565b945050604061050e888289016104b1565b935050606061051f888289016104b1565b9250506080610530888289016104b1565b9150509295509295909350565b60c08201600082015161055360008501826105b8565b50602082015161056660208501826105b8565b50604082015161057960408501826105b8565b50606082015161058c60608501826105b8565b50608082015161059f60808501826105b8565b5060a08201516105b260a08501826105b8565b50505050565b6105c1816105e2565b82525050565b600060c0820190506105dc600083018461053d565b92915050565b600067ffffffffffffffff82169050919050565b6105ff816105e2565b811461060a57600080fd5b5056fea365627a7a72315820c27f3eec13471f88731152ea708eff45037f33305d4aa29cfd42b4ef005919e16c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "59:1027:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:1027:0;;;;;;;",
+  "deployedSourceMap": "59:1027:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:1027:0;;;;;;;;;;;;;;;;;;;;;;;;392:575;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;1000:84;;;:::i;:::-;;;;;;;;;;;;;;;;392:575;564:15;;:::i;:::-;642:1;635:4;:8;629:1;612:14;:18;611:33;591:3;:17;;;:53;;;;;;;;;;;;;;;;;;710:1;697:10;:14;691:1;684:4;:8;683:29;654:3;:26;;;:58;;;;;;;;;;;;;;;;;;767:1;750:14;:18;722:3;:24;;;:47;;;;;;;;;;;;;;;;;;813:1;806:4;:8;779:3;:23;;;:36;;;;;;;;;;;;;;;;;;875:6;870:1;853:14;:18;852:29;825:3;:24;;;:56;;;;;;;;;;;;;;;;;;933:7;928:1;911:14;:18;910:30;891:3;:16;;;:49;;;;;;;;;;;;;;;;;;957:3;950:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;392:575;;;;;;;:::o;1000:84::-;1040:15;;:::i;:::-;1074:3;1067:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1000:84;:::o;59:1027::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;5:128:-1:-;;84:6;71:20;62:29;;96:32;122:5;96:32;;;56:77;;;;;140:733;;;;;;307:3;295:9;286:7;282:23;278:33;275:2;;;324:1;321;314:12;275:2;359:1;376:52;420:7;411:6;400:9;396:22;376:52;;;366:62;;338:96;465:2;483:52;527:7;518:6;507:9;503:22;483:52;;;473:62;;444:97;572:2;590:52;634:7;625:6;614:9;610:22;590:52;;;580:62;;551:97;679:2;697:52;741:7;732:6;721:9;717:22;697:52;;;687:62;;658:97;786:3;805:52;849:7;840:6;829:9;825:22;805:52;;;795:62;;765:98;269:604;;;;;;;;;955:1160;1096:4;1091:3;1087:14;1188:4;1181:5;1177:16;1171:23;1200:61;1255:4;1250:3;1246:14;1232:12;1200:61;;;1116:151;1358:4;1351:5;1347:16;1341:23;1370:61;1425:4;1420:3;1416:14;1402:12;1370:61;;;1277:160;1526:4;1519:5;1515:16;1509:23;1538:61;1593:4;1588:3;1584:14;1570:12;1538:61;;;1447:158;1693:4;1686:5;1682:16;1676:23;1705:61;1760:4;1755:3;1751:14;1737:12;1705:61;;;1615:157;1861:4;1854:5;1850:16;1844:23;1873:61;1928:4;1923:3;1919:14;1905:12;1873:61;;;1782:158;2021:4;2014:5;2010:16;2004:23;2033:61;2088:4;2083:3;2079:14;2065:12;2033:61;;;1950:150;1069:1046;;;;2122:100;2193:23;2210:5;2193:23;;;2188:3;2181:36;2175:47;;;2229:310;;2395:3;2384:9;2380:19;2372:27;;2410:119;2526:1;2515:9;2511:17;2502:6;2410:119;;;2366:173;;;;;2546:96;;2618:18;2611:5;2607:30;2596:41;;2590:52;;;;2649:115;2717:23;2734:5;2717:23;;;2710:5;2707:34;2697:2;;2755:1;2752;2745:12;2697:2;2691:73;",
+  "source": "pragma solidity ^0.5.0;\npragma experimental ABIEncoderV2;\n\ncontract MaterialProvider {\n    Material mat;\n    struct Material {\n        uint64 aluminum_bars;\n        uint64 stainless_steel_sheets;\n        uint64 springs_and_hardware;\n        uint64 bumper_rubber_bands;\n        uint64 interior_light_bulbs;\n        uint64 display_LEDs;\n    }\n\n    //Calcul material base on input component\n    function calculMaterial(\n        uint64 elevator_shaft,\n        uint64 controller,\n        uint64 door,\n        uint64 button,\n        uint64 display\n    ) public returns (Material memory) {\n        mat.aluminum_bars = (elevator_shaft * 1) + (door * 2);\n        mat.stainless_steel_sheets = (door * 4) + (controller * 1);\n        mat.springs_and_hardware = (elevator_shaft * 2);\n        mat.bumper_rubber_bands = (door * 2);\n        mat.interior_light_bulbs = (elevator_shaft * 2) + button;\n        mat.display_LEDs = (elevator_shaft * 2) + display;\n        return mat;\n    }\n\n    //Retrieving the value\n    function retrive() public view returns (Material memory) {\n        return mat;\n    }\n}\n",
+  "sourcePath": "/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/MaterialProvider.sol",
+  "ast": {
+    "absolutePath": "/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/MaterialProvider.sol",
+    "exportedSymbols": {
+      "MaterialProvider": [
+        112
+      ]
+    },
+    "id": 113,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "id": 2,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "24:33:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 112,
+        "linearizedBaseContracts": [
+          112
+        ],
+        "name": "MaterialProvider",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "mat",
+            "nodeType": "VariableDeclaration",
+            "scope": 112,
+            "src": "91:12:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Material_$17_storage",
+              "typeString": "struct MaterialProvider.Material"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "Material",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 17,
+              "src": "91:8:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Material_$17_storage_ptr",
+                "typeString": "struct MaterialProvider.Material"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "MaterialProvider.Material",
+            "id": 17,
+            "members": [
+              {
+                "constant": false,
+                "id": 6,
+                "name": "aluminum_bars",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "135:20:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 5,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "135:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 8,
+                "name": "stainless_steel_sheets",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "165:29:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 7,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "165:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 10,
+                "name": "springs_and_hardware",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "204:27:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "204:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "bumper_rubber_bands",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "241:26:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "241:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14,
+                "name": "interior_light_bulbs",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "277:27:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 13,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "277:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 16,
+                "name": "display_LEDs",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "314:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "314:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Material",
+            "nodeType": "StructDefinition",
+            "scope": 112,
+            "src": "109:231:0",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 102,
+              "nodeType": "Block",
+              "src": "581:386:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 44,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 32,
+                        "name": "mat",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "591:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$17_storage",
+                          "typeString": "struct MaterialProvider.Material storage ref"
+                        }
+                      },
+                      "id": 34,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "aluminum_bars",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6,
+                      "src": "591:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      },
+                      "id": 43,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            },
+                            "id": 37,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 35,
+                              "name": "elevator_shaft",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 19,
+                              "src": "612:14:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "31",
+                              "id": 36,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "629:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1_by_1",
+                                "typeString": "int_const 1"
+                              },
+                              "value": "1"
+                            },
+                            "src": "612:18:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            }
+                          }
+                        ],
+                        "id": 38,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "611:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint64",
+                          "typeString": "uint64"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            },
+                            "id": 41,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 39,
+                              "name": "door",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 23,
+                              "src": "635:4:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "32",
+                              "id": 40,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "642:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_2_by_1",
+                                "typeString": "int_const 2"
+                              },
+                              "value": "2"
+                            },
+                            "src": "635:8:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            }
+                          }
+                        ],
+                        "id": 42,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "634:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint64",
+                          "typeString": "uint64"
+                        }
+                      },
+                      "src": "611:33:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "src": "591:53:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "id": 45,
+                  "nodeType": "ExpressionStatement",
+                  "src": "591:53:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 58,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 46,
+                        "name": "mat",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "654:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$17_storage",
+                          "typeString": "struct MaterialProvider.Material storage ref"
+                        }
+                      },
+                      "id": 48,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "stainless_steel_sheets",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 8,
+                      "src": "654:26:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      },
+                      "id": 57,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            },
+                            "id": 51,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 49,
+                              "name": "door",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 23,
+                              "src": "684:4:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "34",
+                              "id": 50,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "691:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_4_by_1",
+                                "typeString": "int_const 4"
+                              },
+                              "value": "4"
+                            },
+                            "src": "684:8:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            }
+                          }
+                        ],
+                        "id": 52,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "683:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint64",
+                          "typeString": "uint64"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            },
+                            "id": 55,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 53,
+                              "name": "controller",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 21,
+                              "src": "697:10:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "31",
+                              "id": 54,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "710:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1_by_1",
+                                "typeString": "int_const 1"
+                              },
+                              "value": "1"
+                            },
+                            "src": "697:14:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            }
+                          }
+                        ],
+                        "id": 56,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "696:16:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint64",
+                          "typeString": "uint64"
+                        }
+                      },
+                      "src": "683:29:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "src": "654:58:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "id": 59,
+                  "nodeType": "ExpressionStatement",
+                  "src": "654:58:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 67,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 60,
+                        "name": "mat",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "722:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$17_storage",
+                          "typeString": "struct MaterialProvider.Material storage ref"
+                        }
+                      },
+                      "id": 62,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "springs_and_hardware",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10,
+                      "src": "722:24:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "components": [
+                        {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint64",
+                            "typeString": "uint64"
+                          },
+                          "id": 65,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 63,
+                            "name": "elevator_shaft",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 19,
+                            "src": "750:14:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "*",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "hexValue": "32",
+                            "id": 64,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "767:1:0",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_2_by_1",
+                              "typeString": "int_const 2"
+                            },
+                            "value": "2"
+                          },
+                          "src": "750:18:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint64",
+                            "typeString": "uint64"
+                          }
+                        }
+                      ],
+                      "id": 66,
+                      "isConstant": false,
+                      "isInlineArray": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "TupleExpression",
+                      "src": "749:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "src": "722:47:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "id": 68,
+                  "nodeType": "ExpressionStatement",
+                  "src": "722:47:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 76,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 69,
+                        "name": "mat",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "779:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$17_storage",
+                          "typeString": "struct MaterialProvider.Material storage ref"
+                        }
+                      },
+                      "id": 71,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "bumper_rubber_bands",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 12,
+                      "src": "779:23:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "components": [
+                        {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint64",
+                            "typeString": "uint64"
+                          },
+                          "id": 74,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 72,
+                            "name": "door",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 23,
+                            "src": "806:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "*",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "hexValue": "32",
+                            "id": 73,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "813:1:0",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_2_by_1",
+                              "typeString": "int_const 2"
+                            },
+                            "value": "2"
+                          },
+                          "src": "806:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint64",
+                            "typeString": "uint64"
+                          }
+                        }
+                      ],
+                      "id": 75,
+                      "isConstant": false,
+                      "isInlineArray": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "TupleExpression",
+                      "src": "805:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "src": "779:36:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "id": 77,
+                  "nodeType": "ExpressionStatement",
+                  "src": "779:36:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 87,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 78,
+                        "name": "mat",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "825:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$17_storage",
+                          "typeString": "struct MaterialProvider.Material storage ref"
+                        }
+                      },
+                      "id": 80,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "interior_light_bulbs",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14,
+                      "src": "825:24:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      },
+                      "id": 86,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            },
+                            "id": 83,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 81,
+                              "name": "elevator_shaft",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 19,
+                              "src": "853:14:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "32",
+                              "id": 82,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "870:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_2_by_1",
+                                "typeString": "int_const 2"
+                              },
+                              "value": "2"
+                            },
+                            "src": "853:18:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            }
+                          }
+                        ],
+                        "id": 84,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "852:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint64",
+                          "typeString": "uint64"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 85,
+                        "name": "button",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 25,
+                        "src": "875:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint64",
+                          "typeString": "uint64"
+                        }
+                      },
+                      "src": "852:29:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "src": "825:56:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "id": 88,
+                  "nodeType": "ExpressionStatement",
+                  "src": "825:56:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 98,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 89,
+                        "name": "mat",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "891:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$17_storage",
+                          "typeString": "struct MaterialProvider.Material storage ref"
+                        }
+                      },
+                      "id": 91,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "display_LEDs",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 16,
+                      "src": "891:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      },
+                      "id": 97,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            },
+                            "id": 94,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 92,
+                              "name": "elevator_shaft",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 19,
+                              "src": "911:14:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "32",
+                              "id": 93,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "928:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_2_by_1",
+                                "typeString": "int_const 2"
+                              },
+                              "value": "2"
+                            },
+                            "src": "911:18:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint64",
+                              "typeString": "uint64"
+                            }
+                          }
+                        ],
+                        "id": 95,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "910:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint64",
+                          "typeString": "uint64"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 96,
+                        "name": "display",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27,
+                        "src": "933:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint64",
+                          "typeString": "uint64"
+                        }
+                      },
+                      "src": "910:30:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "src": "891:49:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "id": 99,
+                  "nodeType": "ExpressionStatement",
+                  "src": "891:49:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 100,
+                    "name": "mat",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4,
+                    "src": "957:3:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Material_$17_storage",
+                      "typeString": "struct MaterialProvider.Material storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 31,
+                  "id": 101,
+                  "nodeType": "Return",
+                  "src": "950:10:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 103,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculMaterial",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19,
+                  "name": "elevator_shaft",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "425:21:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 18,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "425:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 21,
+                  "name": "controller",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "456:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "456:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23,
+                  "name": "door",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "483:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "483:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25,
+                  "name": "button",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "504:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 24,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "504:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27,
+                  "name": "display",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "527:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 26,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "527:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "415:132:0"
+            },
+            "returnParameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "564:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Material_$17_memory_ptr",
+                    "typeString": "struct MaterialProvider.Material"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 29,
+                    "name": "Material",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 17,
+                    "src": "564:8:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Material_$17_storage_ptr",
+                      "typeString": "struct MaterialProvider.Material"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "563:17:0"
+            },
+            "scope": 112,
+            "src": "392:575:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 110,
+              "nodeType": "Block",
+              "src": "1057:27:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 108,
+                    "name": "mat",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4,
+                    "src": "1074:3:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Material_$17_storage",
+                      "typeString": "struct MaterialProvider.Material storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 107,
+                  "id": 109,
+                  "nodeType": "Return",
+                  "src": "1067:10:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 111,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrive",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 104,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1016:2:0"
+            },
+            "returnParameters": {
+              "id": 107,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 106,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 111,
+                  "src": "1040:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Material_$17_memory_ptr",
+                    "typeString": "struct MaterialProvider.Material"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 105,
+                    "name": "Material",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 17,
+                    "src": "1040:8:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Material_$17_storage_ptr",
+                      "typeString": "struct MaterialProvider.Material"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1039:17:0"
+            },
+            "scope": 112,
+            "src": "1000:84:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 113,
+        "src": "59:1027:0"
+      }
+    ],
+    "src": "0:1087:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/MaterialProvider.sol",
+      "exportedSymbols": {
+        "MaterialProvider": [
+          112
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 2,
+        "name": "PragmaDirective",
+        "src": "24:33:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            112
+          ],
+          "name": "MaterialProvider",
+          "scope": 113
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "mat",
+              "scope": 112,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct MaterialProvider.Material",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Material",
+                  "referencedDeclaration": 17,
+                  "type": "struct MaterialProvider.Material"
+                },
+                "id": 3,
+                "name": "UserDefinedTypeName",
+                "src": "91:8:0"
+              }
+            ],
+            "id": 4,
+            "name": "VariableDeclaration",
+            "src": "91:12:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "MaterialProvider.Material",
+              "name": "Material",
+              "scope": 112,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "aluminum_bars",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint64",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint64",
+                      "type": "uint64"
+                    },
+                    "id": 5,
+                    "name": "ElementaryTypeName",
+                    "src": "135:6:0"
+                  }
+                ],
+                "id": 6,
+                "name": "VariableDeclaration",
+                "src": "135:20:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "stainless_steel_sheets",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint64",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint64",
+                      "type": "uint64"
+                    },
+                    "id": 7,
+                    "name": "ElementaryTypeName",
+                    "src": "165:6:0"
+                  }
+                ],
+                "id": 8,
+                "name": "VariableDeclaration",
+                "src": "165:29:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "springs_and_hardware",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint64",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint64",
+                      "type": "uint64"
+                    },
+                    "id": 9,
+                    "name": "ElementaryTypeName",
+                    "src": "204:6:0"
+                  }
+                ],
+                "id": 10,
+                "name": "VariableDeclaration",
+                "src": "204:27:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "bumper_rubber_bands",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint64",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint64",
+                      "type": "uint64"
+                    },
+                    "id": 11,
+                    "name": "ElementaryTypeName",
+                    "src": "241:6:0"
+                  }
+                ],
+                "id": 12,
+                "name": "VariableDeclaration",
+                "src": "241:26:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "interior_light_bulbs",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint64",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint64",
+                      "type": "uint64"
+                    },
+                    "id": 13,
+                    "name": "ElementaryTypeName",
+                    "src": "277:6:0"
+                  }
+                ],
+                "id": 14,
+                "name": "VariableDeclaration",
+                "src": "277:27:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "display_LEDs",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint64",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint64",
+                      "type": "uint64"
+                    },
+                    "id": 15,
+                    "name": "ElementaryTypeName",
+                    "src": "314:6:0"
+                  }
+                ],
+                "id": 16,
+                "name": "VariableDeclaration",
+                "src": "314:19:0"
+              }
+            ],
+            "id": 17,
+            "name": "StructDefinition",
+            "src": "109:231:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "calculMaterial",
+              "scope": 112,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "elevator_shaft",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint64",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint64",
+                          "type": "uint64"
+                        },
+                        "id": 18,
+                        "name": "ElementaryTypeName",
+                        "src": "425:6:0"
+                      }
+                    ],
+                    "id": 19,
+                    "name": "VariableDeclaration",
+                    "src": "425:21:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "controller",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint64",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint64",
+                          "type": "uint64"
+                        },
+                        "id": 20,
+                        "name": "ElementaryTypeName",
+                        "src": "456:6:0"
+                      }
+                    ],
+                    "id": 21,
+                    "name": "VariableDeclaration",
+                    "src": "456:17:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "door",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint64",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint64",
+                          "type": "uint64"
+                        },
+                        "id": 22,
+                        "name": "ElementaryTypeName",
+                        "src": "483:6:0"
+                      }
+                    ],
+                    "id": 23,
+                    "name": "VariableDeclaration",
+                    "src": "483:11:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "button",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint64",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint64",
+                          "type": "uint64"
+                        },
+                        "id": 24,
+                        "name": "ElementaryTypeName",
+                        "src": "504:6:0"
+                      }
+                    ],
+                    "id": 25,
+                    "name": "VariableDeclaration",
+                    "src": "504:13:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "display",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint64",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint64",
+                          "type": "uint64"
+                        },
+                        "id": 26,
+                        "name": "ElementaryTypeName",
+                        "src": "527:6:0"
+                      }
+                    ],
+                    "id": 27,
+                    "name": "VariableDeclaration",
+                    "src": "527:14:0"
+                  }
+                ],
+                "id": 28,
+                "name": "ParameterList",
+                "src": "415:132:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct MaterialProvider.Material",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Material",
+                          "referencedDeclaration": 17,
+                          "type": "struct MaterialProvider.Material"
+                        },
+                        "id": 29,
+                        "name": "UserDefinedTypeName",
+                        "src": "564:8:0"
+                      }
+                    ],
+                    "id": 30,
+                    "name": "VariableDeclaration",
+                    "src": "564:15:0"
+                  }
+                ],
+                "id": 31,
+                "name": "ParameterList",
+                "src": "563:17:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint64"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "aluminum_bars",
+                              "referencedDeclaration": 6,
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4,
+                                  "type": "struct MaterialProvider.Material storage ref",
+                                  "value": "mat"
+                                },
+                                "id": 32,
+                                "name": "Identifier",
+                                "src": "591:3:0"
+                              }
+                            ],
+                            "id": 34,
+                            "name": "MemberAccess",
+                            "src": "591:17:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "+",
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint64"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint64",
+                                        "typeString": "uint64"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "*",
+                                      "type": "uint64"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 19,
+                                          "type": "uint64",
+                                          "value": "elevator_shaft"
+                                        },
+                                        "id": 35,
+                                        "name": "Identifier",
+                                        "src": "612:14:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "31",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 1",
+                                          "value": "1"
+                                        },
+                                        "id": 36,
+                                        "name": "Literal",
+                                        "src": "629:1:0"
+                                      }
+                                    ],
+                                    "id": 37,
+                                    "name": "BinaryOperation",
+                                    "src": "612:18:0"
+                                  }
+                                ],
+                                "id": 38,
+                                "name": "TupleExpression",
+                                "src": "611:20:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint64"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint64",
+                                        "typeString": "uint64"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "*",
+                                      "type": "uint64"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 23,
+                                          "type": "uint64",
+                                          "value": "door"
+                                        },
+                                        "id": 39,
+                                        "name": "Identifier",
+                                        "src": "635:4:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "32",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 2",
+                                          "value": "2"
+                                        },
+                                        "id": 40,
+                                        "name": "Literal",
+                                        "src": "642:1:0"
+                                      }
+                                    ],
+                                    "id": 41,
+                                    "name": "BinaryOperation",
+                                    "src": "635:8:0"
+                                  }
+                                ],
+                                "id": 42,
+                                "name": "TupleExpression",
+                                "src": "634:10:0"
+                              }
+                            ],
+                            "id": 43,
+                            "name": "BinaryOperation",
+                            "src": "611:33:0"
+                          }
+                        ],
+                        "id": 44,
+                        "name": "Assignment",
+                        "src": "591:53:0"
+                      }
+                    ],
+                    "id": 45,
+                    "name": "ExpressionStatement",
+                    "src": "591:53:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint64"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "stainless_steel_sheets",
+                              "referencedDeclaration": 8,
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4,
+                                  "type": "struct MaterialProvider.Material storage ref",
+                                  "value": "mat"
+                                },
+                                "id": 46,
+                                "name": "Identifier",
+                                "src": "654:3:0"
+                              }
+                            ],
+                            "id": 48,
+                            "name": "MemberAccess",
+                            "src": "654:26:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "+",
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint64"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint64",
+                                        "typeString": "uint64"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "*",
+                                      "type": "uint64"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 23,
+                                          "type": "uint64",
+                                          "value": "door"
+                                        },
+                                        "id": 49,
+                                        "name": "Identifier",
+                                        "src": "684:4:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "34",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 4",
+                                          "value": "4"
+                                        },
+                                        "id": 50,
+                                        "name": "Literal",
+                                        "src": "691:1:0"
+                                      }
+                                    ],
+                                    "id": 51,
+                                    "name": "BinaryOperation",
+                                    "src": "684:8:0"
+                                  }
+                                ],
+                                "id": 52,
+                                "name": "TupleExpression",
+                                "src": "683:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint64"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint64",
+                                        "typeString": "uint64"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "*",
+                                      "type": "uint64"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 21,
+                                          "type": "uint64",
+                                          "value": "controller"
+                                        },
+                                        "id": 53,
+                                        "name": "Identifier",
+                                        "src": "697:10:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "31",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 1",
+                                          "value": "1"
+                                        },
+                                        "id": 54,
+                                        "name": "Literal",
+                                        "src": "710:1:0"
+                                      }
+                                    ],
+                                    "id": 55,
+                                    "name": "BinaryOperation",
+                                    "src": "697:14:0"
+                                  }
+                                ],
+                                "id": 56,
+                                "name": "TupleExpression",
+                                "src": "696:16:0"
+                              }
+                            ],
+                            "id": 57,
+                            "name": "BinaryOperation",
+                            "src": "683:29:0"
+                          }
+                        ],
+                        "id": 58,
+                        "name": "Assignment",
+                        "src": "654:58:0"
+                      }
+                    ],
+                    "id": 59,
+                    "name": "ExpressionStatement",
+                    "src": "654:58:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint64"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "springs_and_hardware",
+                              "referencedDeclaration": 10,
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4,
+                                  "type": "struct MaterialProvider.Material storage ref",
+                                  "value": "mat"
+                                },
+                                "id": 60,
+                                "name": "Identifier",
+                                "src": "722:3:0"
+                              }
+                            ],
+                            "id": 62,
+                            "name": "MemberAccess",
+                            "src": "722:24:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isInlineArray": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint64",
+                                    "typeString": "uint64"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "*",
+                                  "type": "uint64"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 19,
+                                      "type": "uint64",
+                                      "value": "elevator_shaft"
+                                    },
+                                    "id": 63,
+                                    "name": "Identifier",
+                                    "src": "750:14:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "32",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 2",
+                                      "value": "2"
+                                    },
+                                    "id": 64,
+                                    "name": "Literal",
+                                    "src": "767:1:0"
+                                  }
+                                ],
+                                "id": 65,
+                                "name": "BinaryOperation",
+                                "src": "750:18:0"
+                              }
+                            ],
+                            "id": 66,
+                            "name": "TupleExpression",
+                            "src": "749:20:0"
+                          }
+                        ],
+                        "id": 67,
+                        "name": "Assignment",
+                        "src": "722:47:0"
+                      }
+                    ],
+                    "id": 68,
+                    "name": "ExpressionStatement",
+                    "src": "722:47:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint64"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "bumper_rubber_bands",
+                              "referencedDeclaration": 12,
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4,
+                                  "type": "struct MaterialProvider.Material storage ref",
+                                  "value": "mat"
+                                },
+                                "id": 69,
+                                "name": "Identifier",
+                                "src": "779:3:0"
+                              }
+                            ],
+                            "id": 71,
+                            "name": "MemberAccess",
+                            "src": "779:23:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isInlineArray": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint64",
+                                    "typeString": "uint64"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "*",
+                                  "type": "uint64"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 23,
+                                      "type": "uint64",
+                                      "value": "door"
+                                    },
+                                    "id": 72,
+                                    "name": "Identifier",
+                                    "src": "806:4:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "32",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 2",
+                                      "value": "2"
+                                    },
+                                    "id": 73,
+                                    "name": "Literal",
+                                    "src": "813:1:0"
+                                  }
+                                ],
+                                "id": 74,
+                                "name": "BinaryOperation",
+                                "src": "806:8:0"
+                              }
+                            ],
+                            "id": 75,
+                            "name": "TupleExpression",
+                            "src": "805:10:0"
+                          }
+                        ],
+                        "id": 76,
+                        "name": "Assignment",
+                        "src": "779:36:0"
+                      }
+                    ],
+                    "id": 77,
+                    "name": "ExpressionStatement",
+                    "src": "779:36:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint64"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "interior_light_bulbs",
+                              "referencedDeclaration": 14,
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4,
+                                  "type": "struct MaterialProvider.Material storage ref",
+                                  "value": "mat"
+                                },
+                                "id": 78,
+                                "name": "Identifier",
+                                "src": "825:3:0"
+                              }
+                            ],
+                            "id": 80,
+                            "name": "MemberAccess",
+                            "src": "825:24:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "+",
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint64"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint64",
+                                        "typeString": "uint64"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "*",
+                                      "type": "uint64"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 19,
+                                          "type": "uint64",
+                                          "value": "elevator_shaft"
+                                        },
+                                        "id": 81,
+                                        "name": "Identifier",
+                                        "src": "853:14:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "32",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 2",
+                                          "value": "2"
+                                        },
+                                        "id": 82,
+                                        "name": "Literal",
+                                        "src": "870:1:0"
+                                      }
+                                    ],
+                                    "id": 83,
+                                    "name": "BinaryOperation",
+                                    "src": "853:18:0"
+                                  }
+                                ],
+                                "id": 84,
+                                "name": "TupleExpression",
+                                "src": "852:20:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 25,
+                                  "type": "uint64",
+                                  "value": "button"
+                                },
+                                "id": 85,
+                                "name": "Identifier",
+                                "src": "875:6:0"
+                              }
+                            ],
+                            "id": 86,
+                            "name": "BinaryOperation",
+                            "src": "852:29:0"
+                          }
+                        ],
+                        "id": 87,
+                        "name": "Assignment",
+                        "src": "825:56:0"
+                      }
+                    ],
+                    "id": 88,
+                    "name": "ExpressionStatement",
+                    "src": "825:56:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint64"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "display_LEDs",
+                              "referencedDeclaration": 16,
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4,
+                                  "type": "struct MaterialProvider.Material storage ref",
+                                  "value": "mat"
+                                },
+                                "id": 89,
+                                "name": "Identifier",
+                                "src": "891:3:0"
+                              }
+                            ],
+                            "id": 91,
+                            "name": "MemberAccess",
+                            "src": "891:16:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "+",
+                              "type": "uint64"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint64"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint64",
+                                        "typeString": "uint64"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "*",
+                                      "type": "uint64"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 19,
+                                          "type": "uint64",
+                                          "value": "elevator_shaft"
+                                        },
+                                        "id": 92,
+                                        "name": "Identifier",
+                                        "src": "911:14:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "32",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 2",
+                                          "value": "2"
+                                        },
+                                        "id": 93,
+                                        "name": "Literal",
+                                        "src": "928:1:0"
+                                      }
+                                    ],
+                                    "id": 94,
+                                    "name": "BinaryOperation",
+                                    "src": "911:18:0"
+                                  }
+                                ],
+                                "id": 95,
+                                "name": "TupleExpression",
+                                "src": "910:20:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 27,
+                                  "type": "uint64",
+                                  "value": "display"
+                                },
+                                "id": 96,
+                                "name": "Identifier",
+                                "src": "933:7:0"
+                              }
+                            ],
+                            "id": 97,
+                            "name": "BinaryOperation",
+                            "src": "910:30:0"
+                          }
+                        ],
+                        "id": 98,
+                        "name": "Assignment",
+                        "src": "891:49:0"
+                      }
+                    ],
+                    "id": 99,
+                    "name": "ExpressionStatement",
+                    "src": "891:49:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 31
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 4,
+                          "type": "struct MaterialProvider.Material storage ref",
+                          "value": "mat"
+                        },
+                        "id": 100,
+                        "name": "Identifier",
+                        "src": "957:3:0"
+                      }
+                    ],
+                    "id": 101,
+                    "name": "Return",
+                    "src": "950:10:0"
+                  }
+                ],
+                "id": 102,
+                "name": "Block",
+                "src": "581:386:0"
+              }
+            ],
+            "id": 103,
+            "name": "FunctionDefinition",
+            "src": "392:575:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "retrive",
+              "scope": 112,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 104,
+                "name": "ParameterList",
+                "src": "1016:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 111,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct MaterialProvider.Material",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Material",
+                          "referencedDeclaration": 17,
+                          "type": "struct MaterialProvider.Material"
+                        },
+                        "id": 105,
+                        "name": "UserDefinedTypeName",
+                        "src": "1040:8:0"
+                      }
+                    ],
+                    "id": 106,
+                    "name": "VariableDeclaration",
+                    "src": "1040:15:0"
+                  }
+                ],
+                "id": 107,
+                "name": "ParameterList",
+                "src": "1039:17:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 107
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 4,
+                          "type": "struct MaterialProvider.Material storage ref",
+                          "value": "mat"
+                        },
+                        "id": 108,
+                        "name": "Identifier",
+                        "src": "1074:3:0"
+                      }
+                    ],
+                    "id": 109,
+                    "name": "Return",
+                    "src": "1067:10:0"
+                  }
+                ],
+                "id": 110,
+                "name": "Block",
+                "src": "1057:27:0"
+              }
+            ],
+            "id": 111,
+            "name": "FunctionDefinition",
+            "src": "1000:84:0"
+          }
+        ],
+        "id": 112,
+        "name": "ContractDefinition",
+        "src": "59:1027:0"
+      }
+    ],
+    "id": 113,
+    "name": "SourceUnit",
+    "src": "0:1087:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "1618450331378": {
+      "events": {},
+      "links": {},
+      "address": "0x3bc35C129DAE3253088c4881e36f6b0DA82C576E",
+      "transactionHash": "0x8a6324b459cd964712b38669275fb57cb8154333e54bdfa61d2f829a35ac6840"
+    },
+    "1618497360742": {
+      "events": {},
+      "links": {},
+      "address": "0xE59245Fce9387763288C8b436BD30Def5C72f2d8",
+      "transactionHash": "0x50d7d606da1d22788629a36120d0e1143c60aab02611963440625c7cc72b7374"
+    }
+  },
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-15T14:36:13.923Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
