@@ -1,5 +1,4 @@
 pragma solidity ^0.5.0;
-pragma experimental ABIEncoderV2;
 
 contract ProjectOffice {
     Components[] public component;
@@ -19,6 +18,7 @@ contract ProjectOffice {
     }
 
     uint256 orderId = 1;
+    uint256 count = 0;
 
     function set(
         uint256 Batteries,
@@ -26,13 +26,15 @@ contract ProjectOffice {
         uint256 Elevators,
         uint256 Floors
     ) public {
-        component.length++;
         component[component.length - 1].Id = orderId;
-        component[component.length - 1].ElevatorsShafts = Elevators * Columns;
+        component[component.length - 1].ElevatorsShafts = Elevators;
         component[component.length - 1].Controllers = Batteries;
-        component[component.length - 1].Buttons = (Floors * 5);
+        component[component.length - 1].Buttons = (Floors *
+            (Floors - 1) *
+            Columns);
         component[component.length - 1].Doors = Floors * Columns;
-        component[component.length - 1].Displays = Elevators * Columns;
+        component[component.length - 1].Displays = Elevators * Floors;
+        count++;
         orderId++;
     }
 
@@ -48,34 +50,28 @@ contract ProjectOffice {
     // }
 
     function componentCount() public view returns (uint256) {
-        return component.length;
+        return count;
     }
 
-    function getId(uint256 Id) public view returns (uint256) {
-        return component[Id].Id;
-    }
-
-    function getElevatorsShafts(uint256 Id) public view returns (uint256) {
-        return component[Id].ElevatorsShafts;
-    }
-
-    function getControllers(uint256 Id) public view returns (uint256) {
-        return component[Id].Controllers;
-    }
-
-    function getButtons(uint256 Id) public view returns (uint256) {
-        return component[Id].Buttons;
-    }
-
-    function getDoors(uint256 Id) public view returns (uint256) {
-        return component[Id].Doors;
-    }
-
-    function getDisplays(uint256 Id) public view returns (uint256) {
-        return component[Id].Displays;
-    }
-
-    function getComponent() public view returns (Components[] memory) {
-        return component;
+    function getComponent(uint256 index)
+        public
+        view
+        returns (
+            uint256,
+            uint256,
+            uint256,
+            uint256,
+            uint256,
+            uint256
+        )
+    {
+        return (
+            component[index].Id,
+            component[index].ElevatorsShafts,
+            component[index].Controllers,
+            component[index].Buttons,
+            component[index].Doors,
+            component[index].Displays
+        );
     }
 }

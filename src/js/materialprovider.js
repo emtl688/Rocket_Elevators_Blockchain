@@ -1,11 +1,11 @@
-App = {
+MaterialProvider = {
   web3Provider: null,
   contracts: {},
 
   initWeb3: async function() {
     // Modern dapp browsers...
 if (window.ethereum) {
-  App.web3Provider = window.ethereum;
+  MaterialProvider.web3Provider = window.ethereum;
   try {
     // Request account access
     await window.ethereum.enable();
@@ -16,41 +16,41 @@ if (window.ethereum) {
 }
 // Legacy dapp browsers...
 else if (window.web3) {
-  App.web3Provider = window.web3.currentProvider;
+  MaterialProvider.web3Provider = window.web3.currentProvider;
 }
 // If no injected web3 instance is detected, fall back to Ganache
 else {
-  App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+  MaterialProvider.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
 }
-web3 = new Web3(App.web3Provider);
+web3 = new Web3(MaterialProvider.web3Provider);
 
-    return App.initContract();
+    return MaterialProvider.initContract();
   },
 
   initContract: function() {
-    $.getJSON('Adoption.json', function(data) {
+    $.getJSON('MaterialProvider.json', function(data) {
       // Get the necessary contract artifact file and instantiate it with @truffle/contract
-      var AdoptionArtifact = data;
-      App.contracts.Adoption = TruffleContract(AdoptionArtifact);
+      var MaterialProviderArtifact = data;
+      MaterialProvider.contracts.MaterialProvider = TruffleContract(MaterialProviderArtifact);
     
       // Set the provider for our contract
-      App.contracts.Adoption.setProvider(App.web3Provider);
+      MaterialProvider.contracts.MaterialProvider.setProvider(MaterialProvider.web3Provider);
     
       // Use our contract to retrieve and mark the adopted pets
-      return App.markAdopted();
+      return MaterialProvider.markAdopted();
     });
 
-    return App.bindEvents();
+    return MaterialProvider.bindEvents();
   },
 
   bindEvents: function() {
-    $(document).on('click', '.btn-adopt', App.handleAdopt);
+    $(document).on('click', '.btn-submit-mats', MaterialProvider.handleAdopt);
   },
 
   markAdopted: function() {
     var adoptionInstance;
 
-App.contracts.Adoption.deployed().then(function(instance) {
+MaterialProvider.contracts.MaterialProvider.deployed().then(function(instance) {
   adoptionInstance = instance;
 
   return adoptionInstance.getAdopters.call();
@@ -79,13 +79,13 @@ web3.eth.getAccounts(function(error, accounts) {
 
   var account = accounts[0];
 
-  App.contracts.Adoption.deployed().then(function(instance) {
+  MaterialProvider.contracts.MaterialProvider.deployed().then(function(instance) {
     adoptionInstance = instance;
 
     // Execute adopt as a transaction by sending account
     return adoptionInstance.adopt(petId, {from: account});
   }).then(function(result) {
-    return App.markAdopted();
+    return MaterialProvider.markAdopted();
   }).catch(function(err) {
     console.log(err.message);
   });
@@ -96,6 +96,6 @@ web3.eth.getAccounts(function(error, accounts) {
 
 $(function() {
   $(window).load(function() {
-    App.init();
+    MaterialProvider.init();
   });
 });
