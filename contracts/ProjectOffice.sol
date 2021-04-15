@@ -14,7 +14,6 @@ contract ProjectOffice {
     }
 
     constructor() public {
-        customer = msg.sender;
     }
 
     uint256 orderId = 1;
@@ -58,5 +57,8 @@ contract ProjectOffice {
             component[index].Buttons,
             component[index].Doors,
             component[index].Displays);
+    }
+    function getAddress()public view returns(address){
+        return msg.sender;
     }
 }

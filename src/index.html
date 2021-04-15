@@ -98,7 +98,6 @@
   jQuery(document).ready(function($){
      $("#order").change(function (){
       var batt = parseInt($("#battery").val());
-      console.log(batt);
       var col = parseInt($("#column").val());
       var el = parseInt($("#elevator").val());
       var flo = parseInt($("#floor").val());
@@ -107,6 +106,7 @@
         $("#buttons").val(flo *(flo-1)*col);
         $("#doors").val(el*flo*col);
         $("#displays").val(el);
+            // window.location.href = "/home";
+        });
     })
-  })
 </script>
