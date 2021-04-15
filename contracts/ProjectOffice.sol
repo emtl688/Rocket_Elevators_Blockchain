@@ -18,20 +18,20 @@ contract ProjectOffice {
     }
 
     uint256 orderId = 1;
-
+    uint256 count = 0;
     function set(
         uint256 Batteries,
         uint256 Columns,
         uint256 Elevators,
         uint256 Floors
     ) public {
-        component.length++;
         component[component.length - 1].Id = orderId;
-        component[component.length - 1].ElevatorsShafts = Elevators * Columns;
+        component[component.length - 1].ElevatorsShafts = Elevators;
         component[component.length - 1].Controllers = Batteries;
-        component[component.length - 1].Buttons = (Floors * 5);
+        component[component.length - 1].Buttons = (Floors * (Floors-1) * Columns);
         component[component.length - 1].Doors = Floors * Columns;
-        component[component.length - 1].Displays = Elevators * Columns;
+        component[component.length - 1].Displays = Elevators * Floors;
+        count++;
         orderId++;
     }
 
@@ -47,7 +47,7 @@ contract ProjectOffice {
     // }
 
     function componentCount() public view returns (uint256) {
-        return component.length;
+        return count;
     }
 
      function getComponent(uint index) public view returns (uint, uint, uint, uint, uint, uint) {
