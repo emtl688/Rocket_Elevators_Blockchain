@@ -1,5 +1,4 @@
 pragma solidity ^0.5.0;
-pragma experimental ABIEncoderV2;
 
 contract ProjectOffice {
     Components[] public component;
@@ -51,31 +50,13 @@ contract ProjectOffice {
         return component.length;
     }
 
-    function getId(uint256 Id) public view returns (uint256) {
-        return component[Id].Id;
-    }
-
-    function getElevatorsShafts(uint256 Id) public view returns (uint256) {
-        return component[Id].ElevatorsShafts;
-    }
-
-    function getControllers(uint256 Id) public view returns (uint256) {
-        return component[Id].Controllers;
-    }
-
-    function getButtons(uint256 Id) public view returns (uint256) {
-        return component[Id].Buttons;
-    }
-
-    function getDoors(uint256 Id) public view returns (uint256) {
-        return component[Id].Doors;
-    }
-
-    function getDisplays(uint256 Id) public view returns (uint256) {
-        return component[Id].Displays;
-    }
-
-    function getComponent() public view returns (Components[] memory) {
-        return component;
+     function getComponent(uint index) public view returns (uint, uint, uint, uint, uint, uint) {
+        return (
+            component[index].Id,
+            component[index].ElevatorsShafts,
+            component[index].Controllers,
+            component[index].Buttons,
+            component[index].Doors,
+            component[index].Displays);
     }
 }
