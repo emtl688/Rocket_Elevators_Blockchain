@@ -6,62 +6,131 @@
       "inputs": [
         {
           "internalType": "bool",
-          "name": "cabletest",
-          "type": "bool"
-        },
-        {
-          "internalType": "bool",
-          "name": "braketest",
-          "type": "bool"
-        },
-        {
-          "internalType": "bool",
-          "name": "doortest",
-          "type": "bool"
-        },
-        {
-          "internalType": "bool",
-          "name": "perm",
-          "type": "bool"
-        },
-        {
-          "internalType": "bool",
-          "name": "certificate",
+          "name": "isPassed",
           "type": "bool"
         }
       ],
-      "name": "validateUnit",
+      "name": "validateDoor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "isPassed",
+          "type": "bool"
+        }
+      ],
+      "name": "validateCable",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "isPassed",
+          "type": "bool"
+        }
+      ],
+      "name": "validateBrake",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "permitNumber",
+          "type": "string"
+        }
+      ],
+      "name": "addPermit",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "certificateNumber",
+          "type": "string"
+        }
+      ],
+      "name": "addCertificate",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getTest",
       "outputs": [
         {
           "internalType": "bool",
           "name": "",
           "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
         }
       ],
       "payable": false,
-      "stateMutability": "nonpayable",
+      "stateMutability": "view",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"bool\",\"name\":\"cabletest\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"braketest\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"doortest\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"perm\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"certificate\",\"type\":\"bool\"}],\"name\":\"validateUnit\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/QualityControl.sol\":\"QualityControl\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/QualityControl.sol\":{\"keccak256\":\"0x80227c9dc8ceea229cb881f2d461ddfed4bea176490b151c732650a610e9e61b\",\"urls\":[\"bzz-raw://2f1953b4c333d0f722ff1a762f8787cc9232349645cb1a55263c119b7d37d46b\",\"dweb:/ipfs/QmW6Zhvk8TdtTpEFZ6eX1NKKA6ifGLJsk8nbi3Z9wqtqWx\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506101e2806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063434f6dee14610030575b600080fd5b61004a600480360361004591908101906100db565b610060565b6040516100579190610161565b60405180910390f35b60006001151584151514801561007a575060011515851515145b801561008a575060011515861515145b801561009a575060011515831515145b80156100aa575060011515821515145b156100b857600190506100bd565b600090505b95945050505050565b6000813590506100d581610188565b92915050565b600080600080600060a086880312156100f357600080fd5b6000610101888289016100c6565b9550506020610112888289016100c6565b9450506040610123888289016100c6565b9350506060610134888289016100c6565b9250506080610145888289016100c6565b9150509295509295909350565b61015b8161017c565b82525050565b60006020820190506101766000830184610152565b92915050565b60008115159050919050565b6101918161017c565b811461019c57600080fd5b5056fea365627a7a72315820a4537c28f12f57c59e62e4cb67f721961b8231073e4a464b1fe35bd82be7968d6c6578706572696d656e74616cf564736f6c63430005100040",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063434f6dee14610030575b600080fd5b61004a600480360361004591908101906100db565b610060565b6040516100579190610161565b60405180910390f35b60006001151584151514801561007a575060011515851515145b801561008a575060011515861515145b801561009a575060011515831515145b80156100aa575060011515821515145b156100b857600190506100bd565b600090505b95945050505050565b6000813590506100d581610188565b92915050565b600080600080600060a086880312156100f357600080fd5b6000610101888289016100c6565b9550506020610112888289016100c6565b9450506040610123888289016100c6565b9350506060610134888289016100c6565b9250506080610145888289016100c6565b9150509295509295909350565b61015b8161017c565b82525050565b60006020820190506101766000830184610152565b92915050565b60008115159050919050565b6101918161017c565b811461019c57600080fd5b5056fea365627a7a72315820a4537c28f12f57c59e62e4cb67f721961b8231073e4a464b1fe35bd82be7968d6c6578706572696d656e74616cf564736f6c63430005100040",
-  "sourceMap": "59:595:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:595:2;;;;;;;",
-  "deployedSourceMap": "59:595:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:595:2;;;;;;;;;;;;;;;;;;;218:434;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;378:4;423;411:16;;:8;:16;;;:49;;;;;456:4;443:17;;:9;:17;;;411:49;:82;;;;;489:4;476:17;;:9;:17;;;411:82;:110;;;;;517:4;509:12;;:4;:12;;;411:110;:145;;;;;552:4;537:19;;:11;:19;;;411:145;394:252;;;588:4;581:11;;;;394:252;630:5;623:12;;218:434;;;;;;;;:::o;5:124:-1:-;;82:6;69:20;60:29;;94:30;118:5;94:30;;;54:75;;;;;136:713;;;;;;293:3;281:9;272:7;268:23;264:33;261:2;;;310:1;307;300:12;261:2;345:1;362:50;404:7;395:6;384:9;380:22;362:50;;;352:60;;324:94;449:2;467:50;509:7;500:6;489:9;485:22;467:50;;;457:60;;428:95;554:2;572:50;614:7;605:6;594:9;590:22;572:50;;;562:60;;533:95;659:2;677:50;719:7;710:6;699:9;695:22;677:50;;;667:60;;638:95;764:3;783:50;825:7;816:6;805:9;801:22;783:50;;;773:60;;743:96;255:594;;;;;;;;;856:104;933:21;948:5;933:21;;;928:3;921:34;915:45;;;967:201;;1079:2;1068:9;1064:18;1056:26;;1093:65;1155:1;1144:9;1140:17;1131:6;1093:65;;;1050:118;;;;;1175:85;;1248:5;1241:13;1234:21;1223:32;;1217:43;;;;1267:111;1333:21;1348:5;1333:21;;;1326:5;1323:32;1313:2;;1369:1;1366;1359:12;1313:2;1307:71;",
-  "source": "pragma solidity ^0.5.0;\npragma experimental ABIEncoderV2;\n\ncontract QualityControl {\n    struct test {\n        bool Door;\n        bool Cable;\n        bool Brake;\n        bool perm;\n        bool Certificate;\n    }\n\n    function validateUnit(\n        bool cabletest,\n        bool braketest,\n        bool doortest,\n        bool perm,\n        bool certificate\n    ) public returns (bool) {\n        if (\n            doortest == true &&\n            braketest == true &&\n            cabletest == true &&\n            perm == true &&\n            certificate == true\n        ) {\n            return true;\n        } else {\n            return false;\n        }\n    }\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"certificateNumber\",\"type\":\"string\"}],\"name\":\"addCertificate\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"permitNumber\",\"type\":\"string\"}],\"name\":\"addPermit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getTest\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bool\",\"name\":\"isPassed\",\"type\":\"bool\"}],\"name\":\"validateBrake\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bool\",\"name\":\"isPassed\",\"type\":\"bool\"}],\"name\":\"validateCable\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bool\",\"name\":\"isPassed\",\"type\":\"bool\"}],\"name\":\"validateDoor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/QualityControl.sol\":\"QualityControl\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/QualityControl.sol\":{\"keccak256\":\"0x48aee19c6f14ab7b71c074154fef498ab91d422937c7a38f9717b4a939248039\",\"urls\":[\"bzz-raw://11b809626592db807e7f09252c7935a546fd043e3bf2322a943fd2025683641f\",\"dweb:/ipfs/QmTfLqpuMD2rsvy4hdzDxuTNYzuASEhSMj1BvKaxqhMh88\"]}},\"version\":1}",
+  "bytecode": "0x60806040526040518060a00160405280600015158152602001600015158152602001600015158152602001604051806020016040528060008152508152602001604051806020016040528060008152508152506000808201518160000160006101000a81548160ff02191690831515021790555060208201518160000160016101000a81548160ff02191690831515021790555060408201518160000160026101000a81548160ff02191690831515021790555060608201518160010190805190602001906100cf929190610101565b5060808201518160020190805190602001906100ec929190610101565b5050503480156100fb57600080fd5b506101a6565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061014257805160ff1916838001178555610170565b82800160010185558215610170579182015b8281111561016f578251825591602001919060010190610154565b5b50905061017d9190610181565b5090565b6101a391905b8082111561019f576000816000905550600101610187565b5090565b90565b61067f806101b56000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80630a99e4f8146100675780634e3c6449146101225780636b52b4ca14610152578063a8cd0a8014610182578063addc983914610292578063b23a10971461034d575b600080fd5b6101206004803603602081101561007d57600080fd5b810190808035906020019064010000000081111561009a57600080fd5b8201836020820111156100ac57600080fd5b803590602001918460018302840111640100000000831117156100ce57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505061037d565b005b6101506004803603602081101561013857600080fd5b8101908080351515906020019092919050505061039a565b005b6101806004803603602081101561016857600080fd5b810190808035151590602001909291905050506103b9565b005b61018a6103d8565b604051808615151515815260200185151515158152602001841515151581526020018060200180602001838103835285818151815260200191508051906020019080838360005b838110156101ec5780820151818401526020810190506101d1565b50505050905090810190601f1680156102195780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b83811015610252578082015181840152602081019050610237565b50505050905090810190601f16801561027f5780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b61034b600480360360208110156102a857600080fd5b81019080803590602001906401000000008111156102c557600080fd5b8201836020820111156102d757600080fd5b803590602001918460018302840111640100000000831117156102f957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610569565b005b61037b6004803603602081101561036357600080fd5b81019080803515159060200190929190505050610586565b005b80600060020190805190602001906103969291906105a5565b5050565b806000800160016101000a81548160ff02191690831515021790555050565b806000800160026101000a81548160ff02191690831515021790555050565b60008060006060806000800160009054906101000a900460ff166000800160019054906101000a900460ff166000800160029054906101000a900460ff1660006001016000600201818054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104b55780601f1061048a576101008083540402835291602001916104b5565b820191906000526020600020905b81548152906001019060200180831161049857829003601f168201915b50505050509150808054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105515780601f1061052657610100808354040283529160200191610551565b820191906000526020600020905b81548152906001019060200180831161053457829003601f168201915b50505050509050945094509450945094509091929394565b80600060010190805190602001906105829291906105a5565b5050565b806000800160006101000a81548160ff02191690831515021790555050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105e657805160ff1916838001178555610614565b82800160010185558215610614579182015b828111156106135782518255916020019190600101906105f8565b5b5090506106219190610625565b5090565b61064791905b8082111561064357600081600090555060010161062b565b5090565b9056fea265627a7a723158201c4d825976df1108be2be710c13a361f7c73e033b37621f119ee993a52aca01f64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80630a99e4f8146100675780634e3c6449146101225780636b52b4ca14610152578063a8cd0a8014610182578063addc983914610292578063b23a10971461034d575b600080fd5b6101206004803603602081101561007d57600080fd5b810190808035906020019064010000000081111561009a57600080fd5b8201836020820111156100ac57600080fd5b803590602001918460018302840111640100000000831117156100ce57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505061037d565b005b6101506004803603602081101561013857600080fd5b8101908080351515906020019092919050505061039a565b005b6101806004803603602081101561016857600080fd5b810190808035151590602001909291905050506103b9565b005b61018a6103d8565b604051808615151515815260200185151515158152602001841515151581526020018060200180602001838103835285818151815260200191508051906020019080838360005b838110156101ec5780820151818401526020810190506101d1565b50505050905090810190601f1680156102195780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b83811015610252578082015181840152602081019050610237565b50505050905090810190601f16801561027f5780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b61034b600480360360208110156102a857600080fd5b81019080803590602001906401000000008111156102c557600080fd5b8201836020820111156102d757600080fd5b803590602001918460018302840111640100000000831117156102f957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610569565b005b61037b6004803603602081101561036357600080fd5b81019080803515159060200190929190505050610586565b005b80600060020190805190602001906103969291906105a5565b5050565b806000800160016101000a81548160ff02191690831515021790555050565b806000800160026101000a81548160ff02191690831515021790555050565b60008060006060806000800160009054906101000a900460ff166000800160019054906101000a900460ff166000800160029054906101000a900460ff1660006001016000600201818054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104b55780601f1061048a576101008083540402835291602001916104b5565b820191906000526020600020905b81548152906001019060200180831161049857829003601f168201915b50505050509150808054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105515780601f1061052657610100808354040283529160200191610551565b820191906000526020600020905b81548152906001019060200180831161053457829003601f168201915b50505050509050945094509450945094509091929394565b80600060010190805190602001906105829291906105a5565b5050565b806000800160006101000a81548160ff02191690831515021790555050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105e657805160ff1916838001178555610614565b82800160010185558215610614579182015b828111156106135782518255916020019190600101906105f8565b5b5090506106219190610625565b5090565b61064791905b8082111561064357600081600090555060010161062b565b5090565b9056fea265627a7a723158201c4d825976df1108be2be710c13a361f7c73e033b37621f119ee993a52aca01f64736f6c63430005100032",
+  "sourceMap": "25:1083:1:-;;;203:33;;;;;;;;208:5;203:33;;;;;;215:5;203:33;;;;;;222:5;203:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;188:48;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;25:1083;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:1083:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "25:1083:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:1083:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;621:120;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;621:120:1;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;621:120:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;621:120:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;621:120:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;621:120:1;;;;;;;;;;;;;;;:::i;:::-;;333:86;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;333:86:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;425;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;425:86:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;747:359;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;747:359:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;747:359:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;517:98;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;517:98:1;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;517:98:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;517:98:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;517:98:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;517:98:1;;;;;;;;;;;;;;;:::i;:::-;;243:84;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;243:84:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;621:120;717:17;695:7;:19;;:39;;;;;;;;;;;;:::i;:::-;;621:120;:::o;333:86::-;404:8;388:7;:13;;;:24;;;;;;;;;;;;;;;;;;333:86;:::o;425:::-;496:8;480:7;:13;;;:24;;;;;;;;;;;;;;;;;;425:86;:::o;747:359::-;824:4;842;860;878:13;905;964:7;:12;;;;;;;;;;;;990:7;:13;;;;;;;;;;;;1017:7;:13;;;;;;;;;;;;1044:7;:12;;1070:7;:19;;943:156;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;747:359;;;;;:::o;517:98::-;596:12;581:7;:12;;:27;;;;;;;;;;;;:::i;:::-;;517:98;:::o;243:84::-;312:8;297:7;:12;;;:23;;;;;;;;;;;;;;;;;;243:84;:::o;25:1083::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\ncontract QualityControl {\n    struct Test {\n        bool door;\n        bool cable;\n        bool brake;\n        string perm;\n        string certificate;\n    }\n\n    Test newTest = Test(false, false, false, \"\", \"\");\n\n    function validateDoor(bool isPassed) public {\n        newTest.door = isPassed;\n    }\n\n    function validateCable(bool isPassed) public {\n        newTest.cable = isPassed;\n    }\n\n    function validateBrake(bool isPassed) public {\n        newTest.brake = isPassed;\n    }\n\n    function addPermit(string memory permitNumber) public {\n        newTest.perm = permitNumber;\n    }\n\n    function addCertificate(string memory certificateNumber) public {\n        newTest.certificate = certificateNumber;\n    }\n\n    function getTest()\n        public\n        view\n        returns (\n            bool,\n            bool,\n            bool,\n            string memory,\n            string memory\n        )\n    {\n        return (\n            newTest.door,\n            newTest.cable,\n            newTest.brake,\n            newTest.perm,\n            newTest.certificate\n        );\n    }\n}\n",
   "sourcePath": "/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/QualityControl.sol",
   "ast": {
     "absolutePath": "/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/QualityControl.sol",
     "exportedSymbols": {
       "QualityControl": [
-        388
+        327
       ]
     },
-    "id": 389,
+    "id": 328,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 333,
+        "id": 220,
         "literals": [
           "solidity",
           "^",
@@ -69,16 +138,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:2"
-      },
-      {
-        "id": 334,
-        "literals": [
-          "experimental",
-          "ABIEncoderV2"
-        ],
-        "nodeType": "PragmaDirective",
-        "src": "24:33:2"
+        "src": "0:23:1"
       },
       {
         "baseContracts": [],
@@ -86,24 +146,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 388,
+        "id": 327,
         "linearizedBaseContracts": [
-          388
+          327
         ],
         "name": "QualityControl",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "canonicalName": "QualityControl.test",
-            "id": 345,
+            "canonicalName": "QualityControl.Test",
+            "id": 231,
             "members": [
               {
                 "constant": false,
-                "id": 336,
-                "name": "Door",
+                "id": 222,
+                "name": "door",
                 "nodeType": "VariableDeclaration",
-                "scope": 345,
-                "src": "111:9:2",
+                "scope": 231,
+                "src": "77:9:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -111,10 +171,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 335,
+                  "id": 221,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "111:4:2",
+                  "src": "77:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -125,11 +185,11 @@
               },
               {
                 "constant": false,
-                "id": 338,
-                "name": "Cable",
+                "id": 224,
+                "name": "cable",
                 "nodeType": "VariableDeclaration",
-                "scope": 345,
-                "src": "130:10:2",
+                "scope": 231,
+                "src": "96:10:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -137,10 +197,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 337,
+                  "id": 223,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "130:4:2",
+                  "src": "96:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -151,11 +211,11 @@
               },
               {
                 "constant": false,
-                "id": 340,
-                "name": "Brake",
+                "id": 226,
+                "name": "brake",
                 "nodeType": "VariableDeclaration",
-                "scope": 345,
-                "src": "150:10:2",
+                "scope": 231,
+                "src": "116:10:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -163,10 +223,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 339,
+                  "id": 225,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "150:4:2",
+                  "src": "116:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -177,25 +237,25 @@
               },
               {
                 "constant": false,
-                "id": 342,
+                "id": 228,
                 "name": "perm",
                 "nodeType": "VariableDeclaration",
-                "scope": 345,
-                "src": "170:9:2",
+                "scope": 231,
+                "src": "136:11:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_bool",
-                  "typeString": "bool"
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
                 },
                 "typeName": {
-                  "id": 341,
-                  "name": "bool",
+                  "id": 227,
+                  "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "170:4:2",
+                  "src": "136:6:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
                   }
                 },
                 "value": null,
@@ -203,456 +263,294 @@
               },
               {
                 "constant": false,
-                "id": 344,
-                "name": "Certificate",
+                "id": 230,
+                "name": "certificate",
                 "nodeType": "VariableDeclaration",
-                "scope": 345,
-                "src": "189:16:2",
+                "scope": 231,
+                "src": "157:18:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_bool",
-                  "typeString": "bool"
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
                 },
                 "typeName": {
-                  "id": 343,
-                  "name": "bool",
+                  "id": 229,
+                  "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "189:4:2",
+                  "src": "157:6:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
                   }
                 },
                 "value": null,
                 "visibility": "internal"
               }
             ],
-            "name": "test",
+            "name": "Test",
             "nodeType": "StructDefinition",
-            "scope": 388,
-            "src": "89:123:2",
+            "scope": 327,
+            "src": "55:127:1",
             "visibility": "public"
           },
           {
+            "constant": false,
+            "id": 240,
+            "name": "newTest",
+            "nodeType": "VariableDeclaration",
+            "scope": 327,
+            "src": "188:48:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Test_$231_storage",
+              "typeString": "struct QualityControl.Test"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 232,
+              "name": "Test",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 231,
+              "src": "188:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Test_$231_storage_ptr",
+                "typeString": "struct QualityControl.Test"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "66616c7365",
+                  "id": 234,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "bool",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "208:5:1",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "value": "false"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "66616c7365",
+                  "id": 235,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "bool",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "215:5:1",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "value": "false"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "66616c7365",
+                  "id": 236,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "bool",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "222:5:1",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "value": "false"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "",
+                  "id": 237,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "229:2:1",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                    "typeString": "literal_string \"\""
+                  },
+                  "value": ""
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "",
+                  "id": 238,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "233:2:1",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                    "typeString": "literal_string \"\""
+                  },
+                  "value": ""
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  {
+                    "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                    "typeString": "literal_string \"\""
+                  },
+                  {
+                    "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                    "typeString": "literal_string \"\""
+                  }
+                ],
+                "id": 233,
+                "name": "Test",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 231,
+                "src": "203:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_struct$_Test_$231_storage_ptr_$",
+                  "typeString": "type(struct QualityControl.Test storage pointer)"
+                }
+              },
+              "id": 239,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "structConstructorCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "203:33:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Test_$231_memory",
+                "typeString": "struct QualityControl.Test memory"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
             "body": {
-              "id": 386,
+              "id": 251,
               "nodeType": "Block",
-              "src": "384:268:2",
+              "src": "287:40:1",
               "statements": [
                 {
-                  "condition": {
+                  "expression": {
                     "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    },
-                    "id": 378,
+                    "id": 249,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
-                    "leftExpression": {
+                    "leftHandSide": {
                       "argumentTypes": null,
-                      "commonType": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
-                      },
-                      "id": 374,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "leftExpression": {
+                      "expression": {
                         "argumentTypes": null,
-                        "commonType": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        },
-                        "id": 370,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "leftExpression": {
-                          "argumentTypes": null,
-                          "commonType": {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
-                          },
-                          "id": 366,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "leftExpression": {
-                            "argumentTypes": null,
-                            "commonType": {
-                              "typeIdentifier": "t_bool",
-                              "typeString": "bool"
-                            },
-                            "id": 362,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "leftExpression": {
-                              "argumentTypes": null,
-                              "id": 360,
-                              "name": "doortest",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 351,
-                              "src": "411:8:2",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_bool",
-                                "typeString": "bool"
-                              }
-                            },
-                            "nodeType": "BinaryOperation",
-                            "operator": "==",
-                            "rightExpression": {
-                              "argumentTypes": null,
-                              "hexValue": "74727565",
-                              "id": 361,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "kind": "bool",
-                              "lValueRequested": false,
-                              "nodeType": "Literal",
-                              "src": "423:4:2",
-                              "subdenomination": null,
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_bool",
-                                "typeString": "bool"
-                              },
-                              "value": "true"
-                            },
-                            "src": "411:16:2",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_bool",
-                              "typeString": "bool"
-                            }
-                          },
-                          "nodeType": "BinaryOperation",
-                          "operator": "&&",
-                          "rightExpression": {
-                            "argumentTypes": null,
-                            "commonType": {
-                              "typeIdentifier": "t_bool",
-                              "typeString": "bool"
-                            },
-                            "id": 365,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "leftExpression": {
-                              "argumentTypes": null,
-                              "id": 363,
-                              "name": "braketest",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 349,
-                              "src": "443:9:2",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_bool",
-                                "typeString": "bool"
-                              }
-                            },
-                            "nodeType": "BinaryOperation",
-                            "operator": "==",
-                            "rightExpression": {
-                              "argumentTypes": null,
-                              "hexValue": "74727565",
-                              "id": 364,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "kind": "bool",
-                              "lValueRequested": false,
-                              "nodeType": "Literal",
-                              "src": "456:4:2",
-                              "subdenomination": null,
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_bool",
-                                "typeString": "bool"
-                              },
-                              "value": "true"
-                            },
-                            "src": "443:17:2",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_bool",
-                              "typeString": "bool"
-                            }
-                          },
-                          "src": "411:49:2",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
-                          }
-                        },
-                        "nodeType": "BinaryOperation",
-                        "operator": "&&",
-                        "rightExpression": {
-                          "argumentTypes": null,
-                          "commonType": {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
-                          },
-                          "id": 369,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "leftExpression": {
-                            "argumentTypes": null,
-                            "id": 367,
-                            "name": "cabletest",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 347,
-                            "src": "476:9:2",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_bool",
-                              "typeString": "bool"
-                            }
-                          },
-                          "nodeType": "BinaryOperation",
-                          "operator": "==",
-                          "rightExpression": {
-                            "argumentTypes": null,
-                            "hexValue": "74727565",
-                            "id": 368,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": true,
-                            "kind": "bool",
-                            "lValueRequested": false,
-                            "nodeType": "Literal",
-                            "src": "489:4:2",
-                            "subdenomination": null,
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_bool",
-                              "typeString": "bool"
-                            },
-                            "value": "true"
-                          },
-                          "src": "476:17:2",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
-                          }
-                        },
-                        "src": "411:82:2",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      },
-                      "nodeType": "BinaryOperation",
-                      "operator": "&&",
-                      "rightExpression": {
-                        "argumentTypes": null,
-                        "commonType": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        },
-                        "id": 373,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "leftExpression": {
-                          "argumentTypes": null,
-                          "id": 371,
-                          "name": "perm",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 353,
-                          "src": "509:4:2",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
-                          }
-                        },
-                        "nodeType": "BinaryOperation",
-                        "operator": "==",
-                        "rightExpression": {
-                          "argumentTypes": null,
-                          "hexValue": "74727565",
-                          "id": 372,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": true,
-                          "kind": "bool",
-                          "lValueRequested": false,
-                          "nodeType": "Literal",
-                          "src": "517:4:2",
-                          "subdenomination": null,
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
-                          },
-                          "value": "true"
-                        },
-                        "src": "509:12:2",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      },
-                      "src": "411:110:2",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
-                      }
-                    },
-                    "nodeType": "BinaryOperation",
-                    "operator": "&&",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "commonType": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
-                      },
-                      "id": 377,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "leftExpression": {
-                        "argumentTypes": null,
-                        "id": 375,
-                        "name": "certificate",
+                        "id": 245,
+                        "name": "newTest",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 355,
-                        "src": "537:11:2",
+                        "referencedDeclaration": 240,
+                        "src": "297:7:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
+                          "typeIdentifier": "t_struct$_Test_$231_storage",
+                          "typeString": "struct QualityControl.Test storage ref"
                         }
                       },
-                      "nodeType": "BinaryOperation",
-                      "operator": "==",
-                      "rightExpression": {
-                        "argumentTypes": null,
-                        "hexValue": "74727565",
-                        "id": 376,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "bool",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "552:4:2",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        },
-                        "value": "true"
-                      },
-                      "src": "537:19:2",
+                      "id": 247,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "door",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 222,
+                      "src": "297:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "src": "411:145:2",
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 248,
+                      "name": "isPassed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 242,
+                      "src": "312:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "297:23:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "falseBody": {
-                    "id": 384,
-                    "nodeType": "Block",
-                    "src": "609:37:2",
-                    "statements": [
-                      {
-                        "expression": {
-                          "argumentTypes": null,
-                          "hexValue": "66616c7365",
-                          "id": 382,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": true,
-                          "kind": "bool",
-                          "lValueRequested": false,
-                          "nodeType": "Literal",
-                          "src": "630:5:2",
-                          "subdenomination": null,
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
-                          },
-                          "value": "false"
-                        },
-                        "functionReturnParameters": 359,
-                        "id": 383,
-                        "nodeType": "Return",
-                        "src": "623:12:2"
-                      }
-                    ]
-                  },
-                  "id": 385,
-                  "nodeType": "IfStatement",
-                  "src": "394:252:2",
-                  "trueBody": {
-                    "id": 381,
-                    "nodeType": "Block",
-                    "src": "567:36:2",
-                    "statements": [
-                      {
-                        "expression": {
-                          "argumentTypes": null,
-                          "hexValue": "74727565",
-                          "id": 379,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": true,
-                          "kind": "bool",
-                          "lValueRequested": false,
-                          "nodeType": "Literal",
-                          "src": "588:4:2",
-                          "subdenomination": null,
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
-                          },
-                          "value": "true"
-                        },
-                        "functionReturnParameters": 359,
-                        "id": 380,
-                        "nodeType": "Return",
-                        "src": "581:11:2"
-                      }
-                    ]
-                  }
+                  "id": 250,
+                  "nodeType": "ExpressionStatement",
+                  "src": "297:23:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 387,
+            "id": 252,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
-            "name": "validateUnit",
+            "name": "validateDoor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 356,
+              "id": 243,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 347,
-                  "name": "cabletest",
+                  "id": 242,
+                  "name": "isPassed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 387,
-                  "src": "249:14:2",
+                  "scope": 252,
+                  "src": "265:13:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -660,114 +558,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 346,
+                    "id": 241,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "249:4:2",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 349,
-                  "name": "braketest",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 387,
-                  "src": "273:14:2",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
-                  },
-                  "typeName": {
-                    "id": 348,
-                    "name": "bool",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "273:4:2",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 351,
-                  "name": "doortest",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 387,
-                  "src": "297:13:2",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
-                  },
-                  "typeName": {
-                    "id": 350,
-                    "name": "bool",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "297:4:2",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 353,
-                  "name": "perm",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 387,
-                  "src": "320:9:2",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
-                  },
-                  "typeName": {
-                    "id": 352,
-                    "name": "bool",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "320:4:2",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 355,
-                  "name": "certificate",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 387,
-                  "src": "339:16:2",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
-                  },
-                  "typeName": {
-                    "id": 354,
-                    "name": "bool",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "339:4:2",
+                    "src": "265:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -777,19 +571,108 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "239:122:2"
+              "src": "264:15:1"
             },
             "returnParameters": {
-              "id": 359,
+              "id": 244,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "287:0:1"
+            },
+            "scope": 327,
+            "src": "243:84:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 263,
+              "nodeType": "Block",
+              "src": "378:41:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 261,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 257,
+                        "name": "newTest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 240,
+                        "src": "388:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Test_$231_storage",
+                          "typeString": "struct QualityControl.Test storage ref"
+                        }
+                      },
+                      "id": 259,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "cable",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 224,
+                      "src": "388:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 260,
+                      "name": "isPassed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 254,
+                      "src": "404:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "388:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 262,
+                  "nodeType": "ExpressionStatement",
+                  "src": "388:24:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 264,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "validateCable",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 255,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 358,
-                  "name": "",
+                  "id": 254,
+                  "name": "isPassed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 387,
-                  "src": "378:4:2",
+                  "scope": 264,
+                  "src": "356:13:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -797,10 +680,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 357,
+                    "id": 253,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "378:4:2",
+                    "src": "356:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -810,27 +693,731 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "377:6:2"
+              "src": "355:15:1"
             },
-            "scope": 388,
-            "src": "218:434:2",
+            "returnParameters": {
+              "id": 256,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "378:0:1"
+            },
+            "scope": 327,
+            "src": "333:86:1",
             "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 275,
+              "nodeType": "Block",
+              "src": "470:41:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 273,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 269,
+                        "name": "newTest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 240,
+                        "src": "480:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Test_$231_storage",
+                          "typeString": "struct QualityControl.Test storage ref"
+                        }
+                      },
+                      "id": 271,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "brake",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 226,
+                      "src": "480:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 272,
+                      "name": "isPassed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 266,
+                      "src": "496:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "480:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 274,
+                  "nodeType": "ExpressionStatement",
+                  "src": "480:24:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 276,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "validateBrake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 267,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 266,
+                  "name": "isPassed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 276,
+                  "src": "448:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 265,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "448:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "447:15:1"
+            },
+            "returnParameters": {
+              "id": 268,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "470:0:1"
+            },
+            "scope": 327,
+            "src": "425:86:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 287,
+              "nodeType": "Block",
+              "src": "571:44:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 285,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 281,
+                        "name": "newTest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 240,
+                        "src": "581:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Test_$231_storage",
+                          "typeString": "struct QualityControl.Test storage ref"
+                        }
+                      },
+                      "id": 283,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "perm",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 228,
+                      "src": "581:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 284,
+                      "name": "permitNumber",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 278,
+                      "src": "596:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "581:27:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 286,
+                  "nodeType": "ExpressionStatement",
+                  "src": "581:27:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 288,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addPermit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 279,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 278,
+                  "name": "permitNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 288,
+                  "src": "536:26:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 277,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "536:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "535:28:1"
+            },
+            "returnParameters": {
+              "id": 280,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "571:0:1"
+            },
+            "scope": 327,
+            "src": "517:98:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 299,
+              "nodeType": "Block",
+              "src": "685:56:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 297,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 293,
+                        "name": "newTest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 240,
+                        "src": "695:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Test_$231_storage",
+                          "typeString": "struct QualityControl.Test storage ref"
+                        }
+                      },
+                      "id": 295,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "certificate",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 230,
+                      "src": "695:19:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 296,
+                      "name": "certificateNumber",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 290,
+                      "src": "717:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "695:39:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 298,
+                  "nodeType": "ExpressionStatement",
+                  "src": "695:39:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 300,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addCertificate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 291,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 290,
+                  "name": "certificateNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 300,
+                  "src": "645:31:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 289,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "645:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "644:33:1"
+            },
+            "returnParameters": {
+              "id": 292,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "685:0:1"
+            },
+            "scope": 327,
+            "src": "621:120:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 325,
+              "nodeType": "Block",
+              "src": "933:173:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 313,
+                          "name": "newTest",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 240,
+                          "src": "964:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Test_$231_storage",
+                            "typeString": "struct QualityControl.Test storage ref"
+                          }
+                        },
+                        "id": 314,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "door",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 222,
+                        "src": "964:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 315,
+                          "name": "newTest",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 240,
+                          "src": "990:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Test_$231_storage",
+                            "typeString": "struct QualityControl.Test storage ref"
+                          }
+                        },
+                        "id": 316,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "cable",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 224,
+                        "src": "990:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 317,
+                          "name": "newTest",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 240,
+                          "src": "1017:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Test_$231_storage",
+                            "typeString": "struct QualityControl.Test storage ref"
+                          }
+                        },
+                        "id": 318,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "brake",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 226,
+                        "src": "1017:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 319,
+                          "name": "newTest",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 240,
+                          "src": "1044:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Test_$231_storage",
+                            "typeString": "struct QualityControl.Test storage ref"
+                          }
+                        },
+                        "id": 320,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "perm",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 228,
+                        "src": "1044:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 321,
+                          "name": "newTest",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 240,
+                          "src": "1070:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Test_$231_storage",
+                            "typeString": "struct QualityControl.Test storage ref"
+                          }
+                        },
+                        "id": 322,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "certificate",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 230,
+                        "src": "1070:19:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      }
+                    ],
+                    "id": 323,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "950:149:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_bool_$_t_bool_$_t_bool_$_t_string_storage_$_t_string_storage_$",
+                      "typeString": "tuple(bool,bool,bool,string storage ref,string storage ref)"
+                    }
+                  },
+                  "functionReturnParameters": 312,
+                  "id": 324,
+                  "nodeType": "Return",
+                  "src": "943:156:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 326,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 301,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "763:2:1"
+            },
+            "returnParameters": {
+              "id": 312,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 303,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 326,
+                  "src": "824:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 302,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "824:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 305,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 326,
+                  "src": "842:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 304,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "842:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 307,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 326,
+                  "src": "860:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 306,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "860:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 309,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 326,
+                  "src": "878:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 308,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "878:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 311,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 326,
+                  "src": "905:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 310,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "905:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "810:118:1"
+            },
+            "scope": 327,
+            "src": "747:359:1",
+            "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 389,
-        "src": "59:595:2"
+        "scope": 328,
+        "src": "25:1083:1"
       }
     ],
-    "src": "0:655:2"
+    "src": "0:1109:1"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/home/emtl688/leader/Rocket_Elevators_Blockchain/contracts/QualityControl.sol",
       "exportedSymbols": {
         "QualityControl": [
-          388
+          327
         ]
       }
     },
@@ -844,20 +1431,9 @@
             ".0"
           ]
         },
-        "id": 333,
+        "id": 220,
         "name": "PragmaDirective",
-        "src": "0:23:2"
-      },
-      {
-        "attributes": {
-          "literals": [
-            "experimental",
-            "ABIEncoderV2"
-          ]
-        },
-        "id": 334,
-        "name": "PragmaDirective",
-        "src": "24:33:2"
+        "src": "0:23:1"
       },
       {
         "attributes": {
@@ -871,25 +1447,25 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            388
+            327
           ],
           "name": "QualityControl",
-          "scope": 389
+          "scope": 328
         },
         "children": [
           {
             "attributes": {
-              "canonicalName": "QualityControl.test",
-              "name": "test",
-              "scope": 388,
+              "canonicalName": "QualityControl.Test",
+              "name": "Test",
+              "scope": 327,
               "visibility": "public"
             },
             "children": [
               {
                 "attributes": {
                   "constant": false,
-                  "name": "Door",
-                  "scope": 345,
+                  "name": "door",
+                  "scope": 231,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "bool",
@@ -902,20 +1478,20 @@
                       "name": "bool",
                       "type": "bool"
                     },
-                    "id": 335,
+                    "id": 221,
                     "name": "ElementaryTypeName",
-                    "src": "111:4:2"
+                    "src": "77:4:1"
                   }
                 ],
-                "id": 336,
+                "id": 222,
                 "name": "VariableDeclaration",
-                "src": "111:9:2"
+                "src": "77:9:1"
               },
               {
                 "attributes": {
                   "constant": false,
-                  "name": "Cable",
-                  "scope": 345,
+                  "name": "cable",
+                  "scope": 231,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "bool",
@@ -928,20 +1504,20 @@
                       "name": "bool",
                       "type": "bool"
                     },
-                    "id": 337,
+                    "id": 223,
                     "name": "ElementaryTypeName",
-                    "src": "130:4:2"
+                    "src": "96:4:1"
                   }
                 ],
-                "id": 338,
+                "id": 224,
                 "name": "VariableDeclaration",
-                "src": "130:10:2"
+                "src": "96:10:1"
               },
               {
                 "attributes": {
                   "constant": false,
-                  "name": "Brake",
-                  "scope": 345,
+                  "name": "brake",
+                  "scope": 231,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "bool",
@@ -954,71 +1530,238 @@
                       "name": "bool",
                       "type": "bool"
                     },
-                    "id": 339,
+                    "id": 225,
                     "name": "ElementaryTypeName",
-                    "src": "150:4:2"
+                    "src": "116:4:1"
                   }
                 ],
-                "id": 340,
+                "id": 226,
                 "name": "VariableDeclaration",
-                "src": "150:10:2"
+                "src": "116:10:1"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "perm",
-                  "scope": 345,
+                  "scope": 231,
                   "stateVariable": false,
                   "storageLocation": "default",
-                  "type": "bool",
+                  "type": "string",
                   "value": null,
                   "visibility": "internal"
                 },
                 "children": [
                   {
                     "attributes": {
-                      "name": "bool",
-                      "type": "bool"
+                      "name": "string",
+                      "type": "string"
                     },
-                    "id": 341,
+                    "id": 227,
                     "name": "ElementaryTypeName",
-                    "src": "170:4:2"
+                    "src": "136:6:1"
                   }
                 ],
-                "id": 342,
+                "id": 228,
                 "name": "VariableDeclaration",
-                "src": "170:9:2"
+                "src": "136:11:1"
               },
               {
                 "attributes": {
                   "constant": false,
-                  "name": "Certificate",
-                  "scope": 345,
+                  "name": "certificate",
+                  "scope": 231,
                   "stateVariable": false,
                   "storageLocation": "default",
-                  "type": "bool",
+                  "type": "string",
                   "value": null,
                   "visibility": "internal"
                 },
                 "children": [
                   {
                     "attributes": {
-                      "name": "bool",
-                      "type": "bool"
+                      "name": "string",
+                      "type": "string"
                     },
-                    "id": 343,
+                    "id": 229,
                     "name": "ElementaryTypeName",
-                    "src": "189:4:2"
+                    "src": "157:6:1"
                   }
                 ],
-                "id": 344,
+                "id": 230,
                 "name": "VariableDeclaration",
-                "src": "189:16:2"
+                "src": "157:18:1"
               }
             ],
-            "id": 345,
+            "id": 231,
             "name": "StructDefinition",
-            "src": "89:123:2"
+            "src": "55:127:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "newTest",
+              "scope": 327,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct QualityControl.Test",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Test",
+                  "referencedDeclaration": 231,
+                  "type": "struct QualityControl.Test"
+                },
+                "id": 232,
+                "name": "UserDefinedTypeName",
+                "src": "188:4:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "isStructConstructorCall": true,
+                  "lValueRequested": false,
+                  "names": [
+                    null
+                  ],
+                  "type": "struct QualityControl.Test memory",
+                  "type_conversion": false
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                          "typeString": "literal_string \"\""
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                          "typeString": "literal_string \"\""
+                        }
+                      ],
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 231,
+                      "type": "type(struct QualityControl.Test storage pointer)",
+                      "value": "Test"
+                    },
+                    "id": 233,
+                    "name": "Identifier",
+                    "src": "203:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "66616c7365",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "bool",
+                      "type": "bool",
+                      "value": "false"
+                    },
+                    "id": 234,
+                    "name": "Literal",
+                    "src": "208:5:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "66616c7365",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "bool",
+                      "type": "bool",
+                      "value": "false"
+                    },
+                    "id": 235,
+                    "name": "Literal",
+                    "src": "215:5:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "66616c7365",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "bool",
+                      "type": "bool",
+                      "value": "false"
+                    },
+                    "id": 236,
+                    "name": "Literal",
+                    "src": "222:5:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "string",
+                      "type": "literal_string \"\"",
+                      "value": ""
+                    },
+                    "id": 237,
+                    "name": "Literal",
+                    "src": "229:2:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "string",
+                      "type": "literal_string \"\"",
+                      "value": ""
+                    },
+                    "id": 238,
+                    "name": "Literal",
+                    "src": "233:2:1"
+                  }
+                ],
+                "id": 239,
+                "name": "FunctionCall",
+                "src": "203:33:1"
+              }
+            ],
+            "id": 240,
+            "name": "VariableDeclaration",
+            "src": "188:48:1"
           },
           {
             "attributes": {
@@ -1029,8 +1772,8 @@
               "modifiers": [
                 null
               ],
-              "name": "validateUnit",
-              "scope": 388,
+              "name": "validateDoor",
+              "scope": 327,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1041,8 +1784,8 @@
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "cabletest",
-                      "scope": 387,
+                      "name": "isPassed",
+                      "scope": 252,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1055,156 +1798,30 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 346,
+                        "id": 241,
                         "name": "ElementaryTypeName",
-                        "src": "249:4:2"
+                        "src": "265:4:1"
                       }
                     ],
-                    "id": 347,
+                    "id": 242,
                     "name": "VariableDeclaration",
-                    "src": "249:14:2"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "braketest",
-                      "scope": 387,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 348,
-                        "name": "ElementaryTypeName",
-                        "src": "273:4:2"
-                      }
-                    ],
-                    "id": 349,
-                    "name": "VariableDeclaration",
-                    "src": "273:14:2"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "doortest",
-                      "scope": 387,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 350,
-                        "name": "ElementaryTypeName",
-                        "src": "297:4:2"
-                      }
-                    ],
-                    "id": 351,
-                    "name": "VariableDeclaration",
-                    "src": "297:13:2"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "perm",
-                      "scope": 387,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 352,
-                        "name": "ElementaryTypeName",
-                        "src": "320:4:2"
-                      }
-                    ],
-                    "id": 353,
-                    "name": "VariableDeclaration",
-                    "src": "320:9:2"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "certificate",
-                      "scope": 387,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 354,
-                        "name": "ElementaryTypeName",
-                        "src": "339:4:2"
-                      }
-                    ],
-                    "id": 355,
-                    "name": "VariableDeclaration",
-                    "src": "339:16:2"
+                    "src": "265:13:1"
                   }
                 ],
-                "id": 356,
+                "id": 243,
                 "name": "ParameterList",
-                "src": "239:122:2"
+                "src": "264:15:1"
               },
               {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "",
-                      "scope": 387,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 357,
-                        "name": "ElementaryTypeName",
-                        "src": "378:4:2"
-                      }
-                    ],
-                    "id": 358,
-                    "name": "VariableDeclaration",
-                    "src": "378:4:2"
-                  }
-                ],
-                "id": 359,
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 244,
                 "name": "ParameterList",
-                "src": "377:6:2"
+                "src": "287:0:1"
               },
               {
                 "children": [
@@ -1213,294 +1830,23 @@
                       {
                         "attributes": {
                           "argumentTypes": null,
-                          "commonType": {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
-                          },
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "operator": "&&",
+                          "operator": "=",
                           "type": "bool"
                         },
                         "children": [
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "commonType": {
-                                "typeIdentifier": "t_bool",
-                                "typeString": "bool"
-                              },
                               "isConstant": false,
-                              "isLValue": false,
+                              "isLValue": true,
                               "isPure": false,
-                              "lValueRequested": false,
-                              "operator": "&&",
-                              "type": "bool"
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "commonType": {
-                                    "typeIdentifier": "t_bool",
-                                    "typeString": "bool"
-                                  },
-                                  "isConstant": false,
-                                  "isLValue": false,
-                                  "isPure": false,
-                                  "lValueRequested": false,
-                                  "operator": "&&",
-                                  "type": "bool"
-                                },
-                                "children": [
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "commonType": {
-                                        "typeIdentifier": "t_bool",
-                                        "typeString": "bool"
-                                      },
-                                      "isConstant": false,
-                                      "isLValue": false,
-                                      "isPure": false,
-                                      "lValueRequested": false,
-                                      "operator": "&&",
-                                      "type": "bool"
-                                    },
-                                    "children": [
-                                      {
-                                        "attributes": {
-                                          "argumentTypes": null,
-                                          "commonType": {
-                                            "typeIdentifier": "t_bool",
-                                            "typeString": "bool"
-                                          },
-                                          "isConstant": false,
-                                          "isLValue": false,
-                                          "isPure": false,
-                                          "lValueRequested": false,
-                                          "operator": "==",
-                                          "type": "bool"
-                                        },
-                                        "children": [
-                                          {
-                                            "attributes": {
-                                              "argumentTypes": null,
-                                              "overloadedDeclarations": [
-                                                null
-                                              ],
-                                              "referencedDeclaration": 351,
-                                              "type": "bool",
-                                              "value": "doortest"
-                                            },
-                                            "id": 360,
-                                            "name": "Identifier",
-                                            "src": "411:8:2"
-                                          },
-                                          {
-                                            "attributes": {
-                                              "argumentTypes": null,
-                                              "hexvalue": "74727565",
-                                              "isConstant": false,
-                                              "isLValue": false,
-                                              "isPure": true,
-                                              "lValueRequested": false,
-                                              "subdenomination": null,
-                                              "token": "bool",
-                                              "type": "bool",
-                                              "value": "true"
-                                            },
-                                            "id": 361,
-                                            "name": "Literal",
-                                            "src": "423:4:2"
-                                          }
-                                        ],
-                                        "id": 362,
-                                        "name": "BinaryOperation",
-                                        "src": "411:16:2"
-                                      },
-                                      {
-                                        "attributes": {
-                                          "argumentTypes": null,
-                                          "commonType": {
-                                            "typeIdentifier": "t_bool",
-                                            "typeString": "bool"
-                                          },
-                                          "isConstant": false,
-                                          "isLValue": false,
-                                          "isPure": false,
-                                          "lValueRequested": false,
-                                          "operator": "==",
-                                          "type": "bool"
-                                        },
-                                        "children": [
-                                          {
-                                            "attributes": {
-                                              "argumentTypes": null,
-                                              "overloadedDeclarations": [
-                                                null
-                                              ],
-                                              "referencedDeclaration": 349,
-                                              "type": "bool",
-                                              "value": "braketest"
-                                            },
-                                            "id": 363,
-                                            "name": "Identifier",
-                                            "src": "443:9:2"
-                                          },
-                                          {
-                                            "attributes": {
-                                              "argumentTypes": null,
-                                              "hexvalue": "74727565",
-                                              "isConstant": false,
-                                              "isLValue": false,
-                                              "isPure": true,
-                                              "lValueRequested": false,
-                                              "subdenomination": null,
-                                              "token": "bool",
-                                              "type": "bool",
-                                              "value": "true"
-                                            },
-                                            "id": 364,
-                                            "name": "Literal",
-                                            "src": "456:4:2"
-                                          }
-                                        ],
-                                        "id": 365,
-                                        "name": "BinaryOperation",
-                                        "src": "443:17:2"
-                                      }
-                                    ],
-                                    "id": 366,
-                                    "name": "BinaryOperation",
-                                    "src": "411:49:2"
-                                  },
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "commonType": {
-                                        "typeIdentifier": "t_bool",
-                                        "typeString": "bool"
-                                      },
-                                      "isConstant": false,
-                                      "isLValue": false,
-                                      "isPure": false,
-                                      "lValueRequested": false,
-                                      "operator": "==",
-                                      "type": "bool"
-                                    },
-                                    "children": [
-                                      {
-                                        "attributes": {
-                                          "argumentTypes": null,
-                                          "overloadedDeclarations": [
-                                            null
-                                          ],
-                                          "referencedDeclaration": 347,
-                                          "type": "bool",
-                                          "value": "cabletest"
-                                        },
-                                        "id": 367,
-                                        "name": "Identifier",
-                                        "src": "476:9:2"
-                                      },
-                                      {
-                                        "attributes": {
-                                          "argumentTypes": null,
-                                          "hexvalue": "74727565",
-                                          "isConstant": false,
-                                          "isLValue": false,
-                                          "isPure": true,
-                                          "lValueRequested": false,
-                                          "subdenomination": null,
-                                          "token": "bool",
-                                          "type": "bool",
-                                          "value": "true"
-                                        },
-                                        "id": 368,
-                                        "name": "Literal",
-                                        "src": "489:4:2"
-                                      }
-                                    ],
-                                    "id": 369,
-                                    "name": "BinaryOperation",
-                                    "src": "476:17:2"
-                                  }
-                                ],
-                                "id": 370,
-                                "name": "BinaryOperation",
-                                "src": "411:82:2"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "commonType": {
-                                    "typeIdentifier": "t_bool",
-                                    "typeString": "bool"
-                                  },
-                                  "isConstant": false,
-                                  "isLValue": false,
-                                  "isPure": false,
-                                  "lValueRequested": false,
-                                  "operator": "==",
-                                  "type": "bool"
-                                },
-                                "children": [
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 353,
-                                      "type": "bool",
-                                      "value": "perm"
-                                    },
-                                    "id": 371,
-                                    "name": "Identifier",
-                                    "src": "509:4:2"
-                                  },
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "hexvalue": "74727565",
-                                      "isConstant": false,
-                                      "isLValue": false,
-                                      "isPure": true,
-                                      "lValueRequested": false,
-                                      "subdenomination": null,
-                                      "token": "bool",
-                                      "type": "bool",
-                                      "value": "true"
-                                    },
-                                    "id": 372,
-                                    "name": "Literal",
-                                    "src": "517:4:2"
-                                  }
-                                ],
-                                "id": 373,
-                                "name": "BinaryOperation",
-                                "src": "509:12:2"
-                              }
-                            ],
-                            "id": 374,
-                            "name": "BinaryOperation",
-                            "src": "411:110:2"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "commonType": {
-                                "typeIdentifier": "t_bool",
-                                "typeString": "bool"
-                              },
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": false,
-                              "lValueRequested": false,
-                              "operator": "==",
+                              "lValueRequested": true,
+                              "member_name": "door",
+                              "referencedDeclaration": 222,
                               "type": "bool"
                             },
                             "children": [
@@ -1510,148 +1856,994 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 355,
-                                  "type": "bool",
-                                  "value": "certificate"
+                                  "referencedDeclaration": 240,
+                                  "type": "struct QualityControl.Test storage ref",
+                                  "value": "newTest"
                                 },
-                                "id": 375,
+                                "id": 245,
                                 "name": "Identifier",
-                                "src": "537:11:2"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "hexvalue": "74727565",
-                                  "isConstant": false,
-                                  "isLValue": false,
-                                  "isPure": true,
-                                  "lValueRequested": false,
-                                  "subdenomination": null,
-                                  "token": "bool",
-                                  "type": "bool",
-                                  "value": "true"
-                                },
-                                "id": 376,
-                                "name": "Literal",
-                                "src": "552:4:2"
+                                "src": "297:7:1"
                               }
                             ],
-                            "id": 377,
-                            "name": "BinaryOperation",
-                            "src": "537:19:2"
-                          }
-                        ],
-                        "id": 378,
-                        "name": "BinaryOperation",
-                        "src": "411:145:2"
-                      },
-                      {
-                        "children": [
+                            "id": 247,
+                            "name": "MemberAccess",
+                            "src": "297:12:1"
+                          },
                           {
                             "attributes": {
-                              "functionReturnParameters": 359
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 242,
+                              "type": "bool",
+                              "value": "isPassed"
                             },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "hexvalue": "74727565",
-                                  "isConstant": false,
-                                  "isLValue": false,
-                                  "isPure": true,
-                                  "lValueRequested": false,
-                                  "subdenomination": null,
-                                  "token": "bool",
-                                  "type": "bool",
-                                  "value": "true"
-                                },
-                                "id": 379,
-                                "name": "Literal",
-                                "src": "588:4:2"
-                              }
-                            ],
-                            "id": 380,
-                            "name": "Return",
-                            "src": "581:11:2"
+                            "id": 248,
+                            "name": "Identifier",
+                            "src": "312:8:1"
                           }
                         ],
-                        "id": 381,
-                        "name": "Block",
-                        "src": "567:36:2"
-                      },
-                      {
-                        "children": [
-                          {
-                            "attributes": {
-                              "functionReturnParameters": 359
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "hexvalue": "66616c7365",
-                                  "isConstant": false,
-                                  "isLValue": false,
-                                  "isPure": true,
-                                  "lValueRequested": false,
-                                  "subdenomination": null,
-                                  "token": "bool",
-                                  "type": "bool",
-                                  "value": "false"
-                                },
-                                "id": 382,
-                                "name": "Literal",
-                                "src": "630:5:2"
-                              }
-                            ],
-                            "id": 383,
-                            "name": "Return",
-                            "src": "623:12:2"
-                          }
-                        ],
-                        "id": 384,
-                        "name": "Block",
-                        "src": "609:37:2"
+                        "id": 249,
+                        "name": "Assignment",
+                        "src": "297:23:1"
                       }
                     ],
-                    "id": 385,
-                    "name": "IfStatement",
-                    "src": "394:252:2"
+                    "id": 250,
+                    "name": "ExpressionStatement",
+                    "src": "297:23:1"
                   }
                 ],
-                "id": 386,
+                "id": 251,
                 "name": "Block",
-                "src": "384:268:2"
+                "src": "287:40:1"
               }
             ],
-            "id": 387,
+            "id": 252,
             "name": "FunctionDefinition",
-            "src": "218:434:2"
+            "src": "243:84:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "validateCable",
+              "scope": 327,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "isPassed",
+                      "scope": 264,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 253,
+                        "name": "ElementaryTypeName",
+                        "src": "356:4:1"
+                      }
+                    ],
+                    "id": 254,
+                    "name": "VariableDeclaration",
+                    "src": "356:13:1"
+                  }
+                ],
+                "id": 255,
+                "name": "ParameterList",
+                "src": "355:15:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 256,
+                "name": "ParameterList",
+                "src": "378:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "cable",
+                              "referencedDeclaration": 224,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 240,
+                                  "type": "struct QualityControl.Test storage ref",
+                                  "value": "newTest"
+                                },
+                                "id": 257,
+                                "name": "Identifier",
+                                "src": "388:7:1"
+                              }
+                            ],
+                            "id": 259,
+                            "name": "MemberAccess",
+                            "src": "388:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 254,
+                              "type": "bool",
+                              "value": "isPassed"
+                            },
+                            "id": 260,
+                            "name": "Identifier",
+                            "src": "404:8:1"
+                          }
+                        ],
+                        "id": 261,
+                        "name": "Assignment",
+                        "src": "388:24:1"
+                      }
+                    ],
+                    "id": 262,
+                    "name": "ExpressionStatement",
+                    "src": "388:24:1"
+                  }
+                ],
+                "id": 263,
+                "name": "Block",
+                "src": "378:41:1"
+              }
+            ],
+            "id": 264,
+            "name": "FunctionDefinition",
+            "src": "333:86:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "validateBrake",
+              "scope": 327,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "isPassed",
+                      "scope": 276,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 265,
+                        "name": "ElementaryTypeName",
+                        "src": "448:4:1"
+                      }
+                    ],
+                    "id": 266,
+                    "name": "VariableDeclaration",
+                    "src": "448:13:1"
+                  }
+                ],
+                "id": 267,
+                "name": "ParameterList",
+                "src": "447:15:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 268,
+                "name": "ParameterList",
+                "src": "470:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "brake",
+                              "referencedDeclaration": 226,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 240,
+                                  "type": "struct QualityControl.Test storage ref",
+                                  "value": "newTest"
+                                },
+                                "id": 269,
+                                "name": "Identifier",
+                                "src": "480:7:1"
+                              }
+                            ],
+                            "id": 271,
+                            "name": "MemberAccess",
+                            "src": "480:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 266,
+                              "type": "bool",
+                              "value": "isPassed"
+                            },
+                            "id": 272,
+                            "name": "Identifier",
+                            "src": "496:8:1"
+                          }
+                        ],
+                        "id": 273,
+                        "name": "Assignment",
+                        "src": "480:24:1"
+                      }
+                    ],
+                    "id": 274,
+                    "name": "ExpressionStatement",
+                    "src": "480:24:1"
+                  }
+                ],
+                "id": 275,
+                "name": "Block",
+                "src": "470:41:1"
+              }
+            ],
+            "id": 276,
+            "name": "FunctionDefinition",
+            "src": "425:86:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addPermit",
+              "scope": 327,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "permitNumber",
+                      "scope": 288,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 277,
+                        "name": "ElementaryTypeName",
+                        "src": "536:6:1"
+                      }
+                    ],
+                    "id": 278,
+                    "name": "VariableDeclaration",
+                    "src": "536:26:1"
+                  }
+                ],
+                "id": 279,
+                "name": "ParameterList",
+                "src": "535:28:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 280,
+                "name": "ParameterList",
+                "src": "571:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "perm",
+                              "referencedDeclaration": 228,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 240,
+                                  "type": "struct QualityControl.Test storage ref",
+                                  "value": "newTest"
+                                },
+                                "id": 281,
+                                "name": "Identifier",
+                                "src": "581:7:1"
+                              }
+                            ],
+                            "id": 283,
+                            "name": "MemberAccess",
+                            "src": "581:12:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 278,
+                              "type": "string memory",
+                              "value": "permitNumber"
+                            },
+                            "id": 284,
+                            "name": "Identifier",
+                            "src": "596:12:1"
+                          }
+                        ],
+                        "id": 285,
+                        "name": "Assignment",
+                        "src": "581:27:1"
+                      }
+                    ],
+                    "id": 286,
+                    "name": "ExpressionStatement",
+                    "src": "581:27:1"
+                  }
+                ],
+                "id": 287,
+                "name": "Block",
+                "src": "571:44:1"
+              }
+            ],
+            "id": 288,
+            "name": "FunctionDefinition",
+            "src": "517:98:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addCertificate",
+              "scope": 327,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "certificateNumber",
+                      "scope": 300,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 289,
+                        "name": "ElementaryTypeName",
+                        "src": "645:6:1"
+                      }
+                    ],
+                    "id": 290,
+                    "name": "VariableDeclaration",
+                    "src": "645:31:1"
+                  }
+                ],
+                "id": 291,
+                "name": "ParameterList",
+                "src": "644:33:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 292,
+                "name": "ParameterList",
+                "src": "685:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "certificate",
+                              "referencedDeclaration": 230,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 240,
+                                  "type": "struct QualityControl.Test storage ref",
+                                  "value": "newTest"
+                                },
+                                "id": 293,
+                                "name": "Identifier",
+                                "src": "695:7:1"
+                              }
+                            ],
+                            "id": 295,
+                            "name": "MemberAccess",
+                            "src": "695:19:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 290,
+                              "type": "string memory",
+                              "value": "certificateNumber"
+                            },
+                            "id": 296,
+                            "name": "Identifier",
+                            "src": "717:17:1"
+                          }
+                        ],
+                        "id": 297,
+                        "name": "Assignment",
+                        "src": "695:39:1"
+                      }
+                    ],
+                    "id": 298,
+                    "name": "ExpressionStatement",
+                    "src": "695:39:1"
+                  }
+                ],
+                "id": 299,
+                "name": "Block",
+                "src": "685:56:1"
+              }
+            ],
+            "id": 300,
+            "name": "FunctionDefinition",
+            "src": "621:120:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getTest",
+              "scope": 327,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 301,
+                "name": "ParameterList",
+                "src": "763:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 326,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 302,
+                        "name": "ElementaryTypeName",
+                        "src": "824:4:1"
+                      }
+                    ],
+                    "id": 303,
+                    "name": "VariableDeclaration",
+                    "src": "824:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 326,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 304,
+                        "name": "ElementaryTypeName",
+                        "src": "842:4:1"
+                      }
+                    ],
+                    "id": 305,
+                    "name": "VariableDeclaration",
+                    "src": "842:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 326,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 306,
+                        "name": "ElementaryTypeName",
+                        "src": "860:4:1"
+                      }
+                    ],
+                    "id": 307,
+                    "name": "VariableDeclaration",
+                    "src": "860:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 326,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 308,
+                        "name": "ElementaryTypeName",
+                        "src": "878:6:1"
+                      }
+                    ],
+                    "id": 309,
+                    "name": "VariableDeclaration",
+                    "src": "878:13:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 326,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 310,
+                        "name": "ElementaryTypeName",
+                        "src": "905:6:1"
+                      }
+                    ],
+                    "id": 311,
+                    "name": "VariableDeclaration",
+                    "src": "905:13:1"
+                  }
+                ],
+                "id": 312,
+                "name": "ParameterList",
+                "src": "810:118:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 312
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(bool,bool,bool,string storage ref,string storage ref)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "door",
+                              "referencedDeclaration": 222,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 240,
+                                  "type": "struct QualityControl.Test storage ref",
+                                  "value": "newTest"
+                                },
+                                "id": 313,
+                                "name": "Identifier",
+                                "src": "964:7:1"
+                              }
+                            ],
+                            "id": 314,
+                            "name": "MemberAccess",
+                            "src": "964:12:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "cable",
+                              "referencedDeclaration": 224,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 240,
+                                  "type": "struct QualityControl.Test storage ref",
+                                  "value": "newTest"
+                                },
+                                "id": 315,
+                                "name": "Identifier",
+                                "src": "990:7:1"
+                              }
+                            ],
+                            "id": 316,
+                            "name": "MemberAccess",
+                            "src": "990:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "brake",
+                              "referencedDeclaration": 226,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 240,
+                                  "type": "struct QualityControl.Test storage ref",
+                                  "value": "newTest"
+                                },
+                                "id": 317,
+                                "name": "Identifier",
+                                "src": "1017:7:1"
+                              }
+                            ],
+                            "id": 318,
+                            "name": "MemberAccess",
+                            "src": "1017:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "perm",
+                              "referencedDeclaration": 228,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 240,
+                                  "type": "struct QualityControl.Test storage ref",
+                                  "value": "newTest"
+                                },
+                                "id": 319,
+                                "name": "Identifier",
+                                "src": "1044:7:1"
+                              }
+                            ],
+                            "id": 320,
+                            "name": "MemberAccess",
+                            "src": "1044:12:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "certificate",
+                              "referencedDeclaration": 230,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 240,
+                                  "type": "struct QualityControl.Test storage ref",
+                                  "value": "newTest"
+                                },
+                                "id": 321,
+                                "name": "Identifier",
+                                "src": "1070:7:1"
+                              }
+                            ],
+                            "id": 322,
+                            "name": "MemberAccess",
+                            "src": "1070:19:1"
+                          }
+                        ],
+                        "id": 323,
+                        "name": "TupleExpression",
+                        "src": "950:149:1"
+                      }
+                    ],
+                    "id": 324,
+                    "name": "Return",
+                    "src": "943:156:1"
+                  }
+                ],
+                "id": 325,
+                "name": "Block",
+                "src": "933:173:1"
+              }
+            ],
+            "id": 326,
+            "name": "FunctionDefinition",
+            "src": "747:359:1"
           }
         ],
-        "id": 388,
+        "id": 327,
         "name": "ContractDefinition",
-        "src": "59:595:2"
+        "src": "25:1083:1"
       }
     ],
-    "id": 389,
+    "id": 328,
     "name": "SourceUnit",
-    "src": "0:655:2"
+    "src": "0:1109:1"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
-    "1618450331378": {
+    "1618497360742": {
       "events": {},
       "links": {},
-      "address": "0xDEBa789380F421F8671Cf9bbddBC63F7094063CA",
-      "transactionHash": "0x7183895b60b832f770500c9aafea50c405dbaf61956ea80c6093742b3bae0458"
+      "address": "0xC9dbDE35C55DCB616Ee6bf7AE2a861b4dB293D7D",
+      "transactionHash": "0xb3d34b9c424a87f175215fc3cef371256d202fc42eaac6b995b32dc5e8f6a7c3"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-15T01:32:33.609Z",
+  "updatedAt": "2021-04-15T14:36:13.941Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
