@@ -28,6 +28,7 @@ contract QualityControl {
         newTest.perm = permitNumber;
     }
     
+    
     function addCertificate(string memory certificateNumber) public {
         newTest.certificate = certificateNumber;
     }
