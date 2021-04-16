@@ -39,17 +39,17 @@ web3 = new Web3(App.web3Provider);
       App.contracts.ProjectOffice.setProvider(App.web3Provider);
       console.log(App.web3Provider);
       // Use our contract to retrieve and mark the adopted pets
-      return App.markAdopted();
+      return App.getContract();
     });
 
     return App.bindEvents();
   },
 
   bindEvents: function() {
-    $(document).on('click', '.btn-primary', App.handleAdopt);
+    $(document).on('click', '.btn-primary', App.setContract);
   },
 
-  markAdopted: async function() {
+  getContract: async function() {
     App.contracts.ProjectOffice.deployed().then(async function(instance) {
       var projectOfficeInstance = instance;
       
@@ -69,6 +69,7 @@ web3 = new Web3(App.web3Provider);
             //   success: function () {
             //       alert('YOUR CONTRACT HAS BEEN CREATED');
             //   }
+    // })
     
 
       return projectOfficeInstance.set();
@@ -79,9 +80,8 @@ web3 = new Web3(App.web3Provider);
     });
   },
 
-  handleAdopt: function(event) {
+  setContract: function(event) {
     event.preventDefault();
-    console.log("handle Adopt");
 
     console.log(event.target);
     var petId = parseInt($("#shafts").val());
@@ -98,12 +98,29 @@ web3 = new Web3(App.web3Provider);
 
         App.contracts.ProjectOffice.deployed().then((instance) => {
           console.log(instance);
-          
-          projectOfficeInstance = instance;
+          var projectOfficeInstance = instance;
+      
+          var address = projectOfficeInstance.address.toString();
+
+          var datastring = {address: address, contract_type: "ProjectOffice"};
+
+          var data = JSON.stringify(datastring);
+          console.log(data);
+
+          $.ajax({
+            type: 'POST',
+            headers: { 'content-type': 'application/json', "accept": "*/*", "Access-Control-Allow-Origin": "*" },
+            data: data,
+            url: 'https://rest-api-ag.azurewebsites.net/api/contracts',
+            success: function (data) {
+                alert('PROJECT OFFICE CONTRACT HAVE BEEN CREATED');
+            }
+        });
           // Execute adopt as a transaction by sending account
+          console.log(projectOfficeInstance.set($("#battery").val(),$("#column").val(),$("#elevator").val(),$("#floor").val(), {from: account}))
           return projectOfficeInstance.set($("#battery").val(),$("#column").val(),$("#elevator").val(),$("#floor").val(), {from: account})
         }).then(function(result) {
-          return App.markAdopted();//post api
+          return App.getContract();//post api
         }).catch(function(err) {
           console.log(err.message);
         });
