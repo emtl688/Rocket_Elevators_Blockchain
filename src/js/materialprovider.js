@@ -20,7 +20,7 @@ else if (window.web3) {
 }
 // If no injected web3 instance is detected, fall back to Ganache
 else {
-  App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+  App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
 }
 web3 = new Web3(App.web3Provider);
 
@@ -72,9 +72,9 @@ web3 = new Web3(App.web3Provider);
     });
     
 
-      return materialProviderInstance.set();
+      return materialProviderInstance.calculMaterial();
     }).then(function() {
-      App.contracts.MaterialProvider.set($("#shafts").val(),$("#controllers").val(),$("#buttons").val(),$("#doors").val(),$("#displays").val(), {from: account})
+      App.contracts.MaterialProvider.calculMaterial($("#shafts").val(),$("#controllers").val(),$("#buttons").val(),$("#doors").val(),$("#displays").val(), {from: account})
     }).catch(function(err) {
       console.log(err.message);
     });
@@ -102,7 +102,7 @@ web3 = new Web3(App.web3Provider);
           
           materialProviderInstance = instance;
           // Execute adopt as a transaction by sending account
-          return materialProviderInstance.set($("#shafts").val(),$("#controllers").val(),$("#buttons").val(),$("#doors").val(),$("#displays").val(), {from: account})
+          return materialProviderInstance.calculMaterial($("#shafts").val(),$("#controllers").val(),$("#buttons").val(),$("#doors").val(),$("#displays").val(), {from: account})
         }).then(function(result) {
           return App.markAdopted();//post api
         }).catch(function(err) {
