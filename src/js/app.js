@@ -60,16 +60,15 @@ web3 = new Web3(App.web3Provider);
           var data = JSON.stringify(datastring);
           console.log(data);
 
-            $.ajax({
-              type: 'POST',
-              dataType: 'JSON',
-              headers: { 'content-type': 'application/json', "accept": "*/*", "Access-Control-Allow-Origin": "*" },
-              data: data,
-              url: 'https://rest-api-ag.azurewebsites.net/api/contracts',
-              success: function () {
-                  alert('YOUR CONTRACT HAS BEEN CREATED');
-              }
-    });
+            // $.ajax({
+            //   type: 'POST',
+            //   dataType: 'JSON',
+            //   headers: { 'content-type': 'application/json', "accept": "*/*", "Access-Control-Allow-Origin": "*" },
+            //   data: data,
+            //   url: 'https://rest-api-ag.azurewebsites.net/api/contracts',
+            //   success: function () {
+            //       alert('YOUR CONTRACT HAS BEEN CREATED');
+            //   }
     
 
       return projectOfficeInstance.set();

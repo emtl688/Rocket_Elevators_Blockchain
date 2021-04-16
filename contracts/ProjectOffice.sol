@@ -1,79 +1,33 @@
 pragma solidity ^0.5.0;
+pragma experimental ABIEncoderV2;
 
 contract ProjectOffice {
-    Components[] public component;
-    address public customer;
-
-    struct Components {
-        uint256 Id;
-        uint256 ElevatorsShafts; // 8 = 2 columns * 4 elevators
-        uint256 Controllers; // 1 = 1 per battery
-        uint256 Buttons; //  25 = 5floors * 5 buttons
-        uint256 Doors; // 10 =1 per floor * columns
-        uint256 Displays; // 8 = 1 per elevator
+    Project proj;
+    struct Project {
+        uint64 elevator_shafts;
+        uint64 controllers;
+        uint64 buttons;
+        uint64 doors;
+        uint64 displays;
     }
 
-    constructor() public {}
-
-    uint256 orderId = 1;
-    uint256 count = 0;
-
+    //Calcul material base on input component
     function set(
-        uint256 Batteries,
-        uint256 Columns,
-        uint256 Elevators,
-        uint256 Floors
-    ) public {
-        component[component.length - 1].Id = orderId;
-        component[component.length - 1].ElevatorsShafts = Elevators;
-        component[component.length - 1].Controllers = Batteries;
-        component[component.length - 1].Buttons = (Floors *
-            (Floors - 1) *
-            Columns);
-        component[component.length - 1].Doors = Floors * Columns;
-        component[component.length - 1].Displays = Elevators * Floors;
-        count++;
-        orderId++;
+        uint64 batteries,
+        uint64 columns,
+        uint64 elevators,
+        uint64 floors
+    ) public returns (Project memory) {
+        proj.elevator_shafts = elevators;
+        proj.controllers = batteries;
+        proj.buttons = (floors * (floors - 1) * columns);
+        proj.doors = (elevators * floors * columns);
+        proj.displays = elevators;
+        return proj;
     }
 
-    //   function addOrder(uint _shafts,uint _controllers,uint _buttons,uint _doors,uint _displays) public returns(uint)
-    // {
-    //     component.length++;
-    //     component[component.length-1].ElevatorsShafts = _shafts;
-    //     component[component.length-1].Controllers = _controllers;
-    //     component[component.length-1].Buttons = _buttons;
-    //     component[component.length-1].Doors = _doors;
-    //     component[component.length-1].Displays = _displays;
-    //     return component.length;
-    // }
-
-    function componentCount() public view returns (uint256) {
-        return count;
-    }
-
-    function getComponent(uint256 index)
-        public
-        view
-        returns (
-            uint256,
-            uint256,
-            uint256,
-            uint256,
-            uint256,
-            uint256
-        )
-    {
-        return (
-            component[index].Id,
-            component[index].ElevatorsShafts,
-            component[index].Controllers,
-            component[index].Buttons,
-            component[index].Doors,
-            component[index].Displays
-        );
-    }
-
-    function getAddress() public view returns (address) {
-        return msg.sender;
+    //Retrieving the value
+    function retrive() public view returns (Project memory) {
+        return proj;
     }
 }
