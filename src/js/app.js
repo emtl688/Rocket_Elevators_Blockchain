@@ -34,13 +34,13 @@ web3 = new Web3(App.web3Provider);
     $.getJSON('ProjectOffice.json', function(data) {
       // Get the necessary contract artifact file and instantiate it with @truffle/contract
       var ProjectOfficeArtifact = data;
-      console.log(ProjectOfficeArtifact);
+      console.log(data)
       App.contracts.ProjectOffice = TruffleContract(ProjectOfficeArtifact);
     
       // Set the provider for our contract
-      console.log(App.web3Provider);
+      
       App.contracts.ProjectOffice.setProvider(App.web3Provider);
-    
+      console.log(App.web3Provider);
       // Use our contract to retrieve and mark the adopted pets
       return App.markAdopted();
     });
@@ -53,26 +53,30 @@ web3 = new Web3(App.web3Provider);
   },
 
   markAdopted: async function() {
-    
     App.contracts.ProjectOffice.deployed().then(async function(instance) {
       var projectOfficeInstance = instance;
+      
+          var address = projectOfficeInstance.address.toString();
 
-      address = await projectOffice.getAddress();
-      result = await projectOffice.getComponent();
-      console.log(address);
-      id = result[0];
-      contract_type = "Project Office";
-      $.ajax({
-        type: 'POST',
-        data: {id: id, address: address, contract_type: contract_type},
-        url: 'https://rest-api-ag.azurewebsites.net/api/contracts',
-        success: function (data) {
-            alert('YOUR CONTRACT HAS BEEN CREATED');
-        }
+          var datastring = {address: address, contract_type: "ProjectOffice"};
+
+          var data = JSON.stringify(datastring);
+          console.log(data);
+
+            $.ajax({
+              type: 'POST',
+              dataType: 'JSON',
+              headers: { 'content-type': 'application/json', "accept": "*/*", "Access-Control-Allow-Origin": "*" },
+              data: data,
+              url: 'https://rest-api-ag.azurewebsites.net/api/contracts',
+              success: function () {
+                  alert('YOUR CONTRACT HAS BEEN CREATED');
+              }
     });
+    
 
       return projectOfficeInstance.set();
-    }).then(function(adopters) {
+    }).then(function() {
       App.contracts.ProjectOffice.set($("#battery").val(),$("#column").val(),$("#elevator").val(),$("#floor").val(), {from: account})
     }).catch(function(err) {
       console.log(err.message);
@@ -84,31 +88,30 @@ web3 = new Web3(App.web3Provider);
     console.log("handle Adopt");
 
     console.log(event.target);
-    var petId = parseInt($("#ElevatorsShafts").val());
+    var petId = parseInt($("#shafts").val());
     console.log(petId);
 
     var adoptionInstance;
 
-web3.eth.getAccounts(function(error, accounts) {
-  if (error) {
-    console.log(error);
-  }
-  console.log(accounts);
-  var account = accounts[0];
+      web3.eth.getAccounts(function(error, accounts) {
+        if (error) {
+          console.log(error);
+        }
+        console.log(accounts);
+        var account = accounts[0];
 
-  App.contracts.ProjectOffice.deployed().then((instance) => {
-    console.log(instance);
-    
-    adoptionInstance = instance;
-
-    // Execute adopt as a transaction by sending account
-    return adoptionInstance.set(1,1,1,1, {from: account});
-  }).then(function(result) {
-    return App.markAdopted();//post api
-  }).catch(function(err) {
-    console.log(err.message);
-  });
-});
+        App.contracts.ProjectOffice.deployed().then((instance) => {
+          console.log(instance);
+          
+          projectOfficeInstance = instance;
+          // Execute adopt as a transaction by sending account
+          return projectOfficeInstance.set($("#battery").val(),$("#column").val(),$("#elevator").val(),$("#floor").val(), {from: account})
+        }).then(function(result) {
+          return App.markAdopted();//post api
+        }).catch(function(err) {
+          console.log(err.message);
+        });
+      });
   }
 
 };
