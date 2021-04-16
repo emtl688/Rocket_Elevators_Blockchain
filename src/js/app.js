@@ -20,7 +20,7 @@ else if (window.web3) {
 }
 // If no injected web3 instance is detected, fall back to Ganache
 else {
-  App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+  App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
 }
 web3 = new Web3(App.web3Provider);
 
@@ -39,26 +39,26 @@ web3 = new Web3(App.web3Provider);
       App.contracts.ProjectOffice.setProvider(App.web3Provider);
       console.log(App.web3Provider);
       // Use our contract to retrieve and mark the adopted pets
-      return App.markAdopted();
+      return App.setContract();
     });
 
     return App.bindEvents();
   },
 
   bindEvents: function() {
-    $(document).on('click', '.btn-primary', App.handleAdopt);
+    $(document).on('click', '.btn-primary', App.getOrder);
   },
 
-  markAdopted: async function() {
+  setContract: async function() {
     App.contracts.ProjectOffice.deployed().then(async function(instance) {
       var projectOfficeInstance = instance;
       
-          var address = projectOfficeInstance.address.toString();
+          // var address = projectOfficeInstance.address.toString();
 
-          var datastring = {address: address, contract_type: "ProjectOffice"};
+          // var datastring = {address: address, contract_type: "ProjectOffice"};
 
-          var data = JSON.stringify(datastring);
-          console.log(data);
+          // var data = JSON.stringify(datastring);
+          // console.log(data);
 
             // $.ajax({
             //   type: 'POST',
@@ -79,9 +79,8 @@ web3 = new Web3(App.web3Provider);
     });
   },
 
-  handleAdopt: function(event) {
+  getOrder: function(event) {
     event.preventDefault();
-    console.log("handle Adopt");
 
     console.log(event.target);
     var petId = parseInt($("#shafts").val());
@@ -98,12 +97,30 @@ web3 = new Web3(App.web3Provider);
 
         App.contracts.ProjectOffice.deployed().then((instance) => {
           console.log(instance);
-          
-          projectOfficeInstance = instance;
+          var projectOfficeInstance = instance;
+      
+          var address = projectOfficeInstance.address.toString();
+
+          var datastring = {address: address, contract_type: "ProjectOffice"};
+
+          var data = JSON.stringify(datastring);
+          console.log(data);
+
+          $.ajax({
+            type: 'POST',
+            headers: { 'content-type': 'application/json', "accept": "*/*", "Access-Control-Allow-Origin": "*" },
+            data: data,
+            url: 'https://rest-api-ag.azurewebsites.net/api/contracts',
+            success: function (data) {
+                alert('YOUR CONTRACT HAVE BEEN CREATED');
+            }
+        });
+        console.log("ZAP")
           // Execute adopt as a transaction by sending account
+          console.log(projectOfficeInstance.set($("#battery").val(),$("#column").val(),$("#elevator").val(),$("#floor").val(), {from: account}))
           return projectOfficeInstance.set($("#battery").val(),$("#column").val(),$("#elevator").val(),$("#floor").val(), {from: account})
         }).then(function(result) {
-          return App.markAdopted();//post api
+          return App.setContract();//post api
         }).catch(function(err) {
           console.log(err.message);
         });
