@@ -39,6 +39,42 @@
       </div>
     </nav>
 
+    <div class="col-md-10">
+      <h4>Quality Control Form</h4>
+      <br>
+      <form  id="order"><div class="form-group battery">
+        <label for="battery">Door Test Status:</label>
+        <select id="doorTest" name="doorTest">
+          <option value="successful">Successful</option>
+          <option value="failed">Failed</option>
+        </select>
+      </div>
+      <div class="form-group column">
+        <label  for="column">Cable Test Status:</label>
+        <select id="cableTest" name="cableTest">
+          <option value="successful">Successful</option>
+          <option value="failed">Failed</option>
+        </select>
+      </div>
+      <div class="form-group column">
+        <label  for="column">Brake Test Status:</label>
+        <select id="brakeTest" name="brakeTest">
+          <option value="successful">Successful</option>
+          <option value="failed">Failed</option>
+        </select>
+      </div>
+      <div class="form-group elevator">
+        <label for="batteryPermit">Battery Operating Permit:</label>
+        <input type="text" class="form-control" id="batteryPermit" >
+      </div>
+      <div class="form-group floor">
+        <label  for="certificate">Certificate of Conformity:</label>
+        <input type="text" class="form-control" id="certificate" >
+      </div>
+      <button type="submit" class="btn btn-warning">Submit</button>
+      </form>
+    </div>
+
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -48,157 +84,5 @@
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
     <script src="js/qualitycontrol.js"></script>
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">Test</th>
-                <th scope="col">Components</th>
-                <th scope="col">Author</th>
-                
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="doorCheck" >
-                      <label class="custom-control-label" for="customCheck1">1</label>
-                  </div>
-                </td>
-                <td>Door</td>
-                <td>Quality control</td>
-                
-              </tr>
-              <tr>
-                <td>
-                  <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="cableCheck" >
-                      <label class="custom-control-label" for="customCheck2">2</label>
-                  </div>
-                </td>
-                <td>Cable</td>
-                <td>Quality control</td>
-                
-              </tr>
-              <tr>
-                <td>
-                  <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="brakeCheck" >
-                      <label class="custom-control-label" for="customCheck3">3</label>
-                  </div>
-                </td>
-                <td>Brake</td>
-                <td>Quality control</td>
-                
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-      <h2 class="text-center"> certification and permit</h2>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">Certification</th>
-                <th scope="col">Components</th>
-                <th scope="col">Author</th>
-                
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="columnCheck" >
-                      <label class="custom-control-label" for="customCheck1">1</label>
-                  </div>
-                </td>
-                <td>Battery</td>
-                <td>Quality control</td>
-                
-              </tr>
-              <tr>
-                <td>
-                  <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="batteryCheck" >
-                      <label class="custom-control-label" for="customCheck2">2</label>
-                  </div>
-                </td>
-                <td>Column</td>
-                <td>Quality control</td>
-                
-              </tr>
-              
-              
-            </tbody>
-          </table>
-          <div>
-            <input class="btn btn-primary" type="submit" value="Submit" id = "submit" disabled>
-          </div>
-        </div>
-      </div>
-    </div>
-   
-
-
-
-
-
   </body>
 </html>
-<script>
-
-
-window.displaySubmitBtn = function() {
-      var b = document.getElementById("doorCheck");
-      var 
-
-      var c = document.getElementById("cableCheck");
-      var customerId = c.options[c.selectedIndex].value;
-
-      var c = document.getElementById("brakeCheck");
-      var batteryId = c.options[c.selectedIndex].value;
-
-      var c = document.getElementById("columnCheck");
-      var batteryId = c.options[c.selectedIndex].value;
-
-      var c = document.getElementById("batteryCheck");
-      var batteryId = c.options[c.selectedIndex].value;
-
-
-      var submitBtn = document.getElementsById("submit");
-      if(buildingId && buildingId != -1
-        && customerId && customerId != -1
-        && batteryId && batteryId != -1) {
-        submitBtn[0].removeAttribute("disabled")
-      } else {
-        submitBtn[0].setAttribute("disabled","")
-      }
-        
-
-          
-    }
-
-    window.displaySubmitBtn()
-
-
-  var doorCheck = document.querySelector('#customCheck1');
-  doorCheck.addEventListener('change', function(e){
-
-  })
-
-
-
-
-</script>

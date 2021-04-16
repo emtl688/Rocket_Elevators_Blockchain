@@ -1,53 +1,34 @@
 pragma solidity ^0.5.0;
+pragma experimental ABIEncoderV2;
 
 contract QualityControl {
-    struct Test {
-        bool door;
-        bool cable;
-        bool brake;
-        string perm;
-        string certificate;
+    Quality qual;
+    struct Quality {
+        bytes32 doorTest;
+        bytes32 cableTest;
+        bytes32 brakeTest;
+        bytes32 batteryPermit;
+        bytes32 certificate;
     }
 
-    Test newTest = Test(false, false, false, "", "");
-
-    function validateDoor(bool isPassed) public {
-        newTest.door = isPassed;
+    //Calcul material base on input component
+    function qualCheck(
+        bytes32 doorTest,
+        bytes32 cableTest,
+        bytes32 brakeTest,
+        bytes32 batteryPermit,
+        bytes32 certificate
+    ) public returns (Quality memory) {
+        qual.doorTest = doorTest;
+        qual.cableTest = cableTest;
+        qual.brakeTest = brakeTest;
+        qual.batteryPermit = batteryPermit;
+        qual.certificate = certificate;
+        return qual;
     }
 
-    function validateCable(bool isPassed) public {
-        newTest.cable = isPassed;
-    }
-
-    function validateBrake(bool isPassed) public {
-        newTest.brake = isPassed;
-    }
-
-    function addPermit(string memory permitNumber) public {
-        newTest.perm = permitNumber;
-    }
-
-    function addCertificate(string memory certificateNumber) public {
-        newTest.certificate = certificateNumber;
-    }
-
-    function getTest()
-        public
-        view
-        returns (
-            bool,
-            bool,
-            bool,
-            string memory,
-            string memory
-        )
-    {
-        return (
-            newTest.door,
-            newTest.cable,
-            newTest.brake,
-            newTest.perm,
-            newTest.certificate
-        );
+    //Retrieving the value
+    function retrive() public view returns (Quality memory) {
+        return qual;
     }
 }
