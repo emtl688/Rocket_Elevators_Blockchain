@@ -9,65 +9,82 @@ App = {
 
   initWeb3: async function() {
     // Modern dapp browsers...
-      if (window.ethereum) {
-        App.web3Provider = window.ethereum;
-        try {
-          // Request account access
-          await window.ethereum.enable();
-        } catch (error) {
-          // User denied account access...
-          console.error("User denied account access")
-        }
-      }
-      // Legacy dapp browsers...
-      else if (window.web3) {
-        App.web3Provider = window.web3.currentProvider;
-      }
-      // If no injected web3 instance is detected, fall back to Ganache
-      else {
-        App.web3Provider = new Web3.providers.HttpProvider('http://172.28.112.1:7545');
-      }
-
-      App.web3Provider = new Web3.providers.HttpProvider('http://172.28.112.1:7545');
-      web3 = new Web3(App.web3Provider);
+if (window.ethereum) {
+  App.web3Provider = window.ethereum;
+  try {
+    // Request account access
+    await window.ethereum.enable();
+  } catch (error) {
+    // User denied account access...
+    console.error("User denied account access")
+  }
+}
+// Legacy dapp browsers...
+else if (window.web3) {
+  App.web3Provider = window.web3.currentProvider;
+}
+// If no injected web3 instance is detected, fall back to Ganache
+else {
+  App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+}
+web3 = new Web3(App.web3Provider);
 
     return App.initContract();
   },
 
-initContract: function() {
-  $.getJSON('QualityControl.json', function(data) {
-    console.log(data)
-    // Get the necessary contract artifact file and instantiate it with @truffle/contract
-    var QualityControlArtifact = data;
-    App.contracts.QualityControl = TruffleContract(QualityControlArtifact);
-  
-    // Set the provider for our contract
-    App.contracts.QualityControl.setProvider(App.web3Provider);
-  
-    // Use our contract to retrieve and mark the adopted pets
-    return App.getTest();
-  });
+  initContract: function() {
+    $.getJSON('QualityControl.json', function(data) {
+      // Get the necessary contract artifact file and instantiate it with @truffle/contract
+      var QualityControlArtifact = data;
+      console.log(data)
+      App.contracts.QualityControl = TruffleContract(QualityControlArtifact);
+    
+      // Set the provider for our contract
+      
+      App.contracts.QualityControl.setProvider(App.web3Provider);
+      console.log(App.web3Provider);
+      // Use our contract to retrieve and mark the adopted pets
+      return App.getTestt();
+    });
 
-  return App.bindEvents();
-},
+    return App.bindEvents();
+  },
 
 bindEvents: function() {
-  $(document).on('click', '#doorCheck', App.doorchanged);
-  $(document).on('click', '#cableCheck', App.cablechanged);
-  $(document).on('click', '#brakeCheck', App.brakechanged);
-  $(document).on('click', '#columnCheck', App.columnchanged);
-  $(document).on('click', '#batteryCheck', App.batterychanged);
-  $(document).on('click', '#submit', App.submitContrat);
+  // $(document).on('click', '#doorCheck', App.doorchanged);
+  // $(document).on('click', '#cableCheck', App.cablechanged);
+  // $(document).on('click', '#brakeCheck', App.brakechanged);
+  // $(document).on('click', '#columnCheck', App.columnchanged);
+  // $(document).on('click', '#batteryCheck', App.batterychanged);
+  $(document).on('click', '.btn-primary', App.submitContrat);
 },
-getTest: function() {
-//recupere les checkbox
+getTestt:async function() {
+  console.log("EEEEEEEEEE")
+  App.contracts.QualityControl.deployed().then(async function(instance) {
+    var QualityControlInstance = instance;
+    
 
+    return QualityControlInstance.getTest();
+  }).then(function(adopters) {
+    console.log("FFFFFFFF")
+    return QualityControlInstance.getTest();
+  }).catch(function(err) {
+    console.log(err.message);
+  });
 
-
-  var QualityControlInstance;
+},
+submitContrat: function(event) {
+  //recupere les checkbox
+  event.preventDefault();
+    web3.eth.getAccounts(function(error, accounts) {
+      if (error) {
+        console.log(error);
+      }
+      console.log(account);
+      var account = accounts[0];
+  
 
   App.contracts.QualityControl.deployed().then(function(instance) {
-    QualityControlInstance = instance;
     var QualityControlInstance = instance;
     
         var address = QualityControlInstance.address.toString();
@@ -87,35 +104,13 @@ getTest: function() {
                 alert('YOUR CONTRACT HAS BEEN CREATED');
             }
   });
-    
-
-    return QualityControlInstance.getTest.call(x,y);
-  }).then(function(adopters) {
-  
-  }).catch(function(err) {
-    console.log(err.message);
-  });
-
-},
-submitContrat: function() {
-  //recupere les checkbox
-  
-  var QualityControlInstance;
-
-  App.contracts.QualityControl.deployed().then(function(instance) {
-    QualityControlInstance = instance;
-
     return QualityControlInstance.getTest.call();
   }).then(function(data) {
-    console.log(data)
-    // for (i = 0; i < adopters.length; i++) {
-    //   if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-    //     $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
-    //   }
-    // }
+    return App.getTestt();
   }).catch(function(err) {
     console.log(err.message);
   });
+    });
 
 
 
