@@ -49,28 +49,9 @@ App = {
     $(document).on('click', '.btn-send-call-sign', App.callSign);
   },
 
-  // markAdopted: function() {
-  //   var solutionManufacturingInstance;
-
-  //   App.contracts.Adoption.deployed().then(function(instance) {
-  //     solutionManufacturingInstance = instance;
-
-  //     return solutionManufacturingInstance.getDoor(1).call();
-  //   }).then(function(adopters) {
-  //     for (i = 0; i < adopters.length; i++) {
-  //       if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-  //         $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
-  //       }
-  //     }
-  //   }).catch(function(err) {
-  //     console.log(err.message);
-  //   });
-  // },
-
   addDoor: function(event) {
     event.preventDefault();
 
-    // var petId = parseInt($(event.target).data('id'));
     var solutionManufacturingInstance;
 
     web3.eth.getAccounts(function(error, accounts) {
@@ -83,7 +64,6 @@ App = {
       App.contracts.SolutionManufacturing.deployed().then(function(instance) {
         solutionManufacturingInstance = instance;
 
-        // Execute adopt as a transaction by sending account
         console.log("Creating door...");
 
         return solutionManufacturingInstance.addDoor(1, 2, 3, 4, 5, 6, {from: account});
@@ -92,7 +72,6 @@ App = {
       });
     });
   }
-
 };
 
 $(function() {
