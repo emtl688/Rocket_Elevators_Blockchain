@@ -13,9 +13,7 @@ contract ProjectOffice {
         uint256 Displays; // 8 = 1 per elevator
     }
 
-    constructor() public {
-        customer = msg.sender;
-    }
+    constructor() public {}
 
     uint256 orderId = 1;
     uint256 count = 0;
@@ -73,5 +71,9 @@ contract ProjectOffice {
             component[index].Doors,
             component[index].Displays
         );
+    }
+
+    function getAddress() public view returns (address) {
+        return msg.sender;
     }
 }

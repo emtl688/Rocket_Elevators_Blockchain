@@ -39,53 +39,57 @@
       </div>
     </nav>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Material</th>
-          <th scope="col">Quantity</th>
-          <th scope="col">Verification</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Aluminum Bars</td>
-          <td>X</td>
-          <td><input type="checkbox" name="verified_alum" />&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Stainless Steel Sheets</td>
-          <td>X</td>
-          <td><input type="checkbox" name="verified_steel" />&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Springs & Other Hardware</td>
-          <td>X</td>
-          <td><input type="checkbox" name="verified_springs" />&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Bumper Rubber Bands</td>
-          <td>X</td>
-          <td><input type="checkbox" name="verified_rubber" />&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Interior Light Bulbs</td>
-          <td>X</td>
-          <td><input type="checkbox" name="verified_bulbs" />&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Display LEDs</td>
-          <td>X</td>
-          <td><input type="checkbox" name="verified_display" />&nbsp;</td>
-        </tr>
-      </tbody>
-    <button type="button" class="btn btn-primary btn-submit-mats"> SUBMIT </button>
-    </table>
-
-
-
-
-
+    <div class="col-md-10">
+      <h4>Input Component Data</h4>
+      <br>
+      <form  id="mats"><div class="form-group battery">
+        <label for="shafts">Elevator Shafts Needed:</label>
+        <input type="number" class="form-control" id="shafts">
+      </div>
+      <div class="form-group column">
+        <label  for="controllers">Controllers Needed:</label>
+        <input type="number" class="form-control" id="controllers">
+      </div>
+      <div class="form-group elevator">
+        <label for="buttons">Buttons Needed:</label>
+        <input type="number" class="form-control" id="buttons">
+      </div>
+      <div class="form-group floor">
+        <label  for="doors">Doors Needed:</label>
+        <input type="number" class="form-control" id="doors">
+      </div>
+      <div class="form-group floor">
+        <label  for="displays">Displays Needed:</label>
+        <input type="number" class="form-control" id="displays">
+      </div>
+    
+        <div class="form-group">
+          <label for="alumBars">Aluminum Bars:<small>   X</small></label>
+          <input type="number" class="form-control" id="alumBars" disabled>
+        </div>
+        <div class="form-group">
+          <label for="steelSheets">Stainless Steel Sheets:<small>   X</small></label>
+          <input type="number" class="form-control" id="steelSheets" disabled>
+        </div>
+        <div class="form-group">
+          <label for="springs">Springs & Other Hardware (Kit):<small>   X</small></label>
+          <input type="number" class="form-control" id="springs" disabled>
+        </div>
+        <div class="form-group">
+          <label for="rubberBands">Bumper Rubber Bands:<small>   X</small></label>
+          <input type="number" class="form-control" id="rubberBands" disabled>
+        </div>
+        <div class="form-group">
+          <label for="lightBulbs">Interior Light Bulbs: <small>   X</small></label>
+          <input type="number" class="form-control" id="lightBulbs" disabled>
+        </div>
+        <div class="form-group">
+          <label for="displayPanels">Display LEDs for Panels: <small>   X</small></label>
+          <input type="number" class="form-control" id="displayPanels" disabled>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
 
 
 
@@ -98,3 +102,21 @@
     <script src="js/materialprovider.js"></script>
   </body>
 </html>
+<script>
+  jQuery(document).ready(function($){
+     $("#mats").change(function (){
+      var shafts = parseInt($("#shafts").val());
+      var controllers = parseInt($("#controllers").val());
+      var buttons = parseInt($("#buttons").val());
+      var doors = parseInt($("#doors").val());
+      var displays = parseInt($("#displays").val());
+        $("#alumBars").val((shafts * 1) + (doors * 2));
+        $("#steelSheets").val((doors * 4) + (controllers * 1));
+        $("#springs").val(shafts * 2);
+        $("#rubberBands").val(doors * 2);
+        $("#lightBulbs").val((shafts * 2) + (buttons * 1));
+        $("#displayPanels").val((shafts * 2) + (displays * 1));
+
+        });
+    })
+</script>
