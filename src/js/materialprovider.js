@@ -20,7 +20,7 @@ else if (window.web3) {
 }
 // If no injected web3 instance is detected, fall back to Ganache
 else {
-  App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+  App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
 }
 web3 = new Web3(App.web3Provider);
 
@@ -98,8 +98,24 @@ web3 = new Web3(App.web3Provider);
 
         App.contracts.MaterialProvider.deployed().then((instance) => {
           console.log(instance);
-          
-          materialProviderInstance = instance;
+          var materialProviderInstance = instance;
+      
+          var address = materialProviderInstance.address.toString();
+
+          var datastring = {address: address, contract_type: "MaterialProvider"};
+
+          var data = JSON.stringify(datastring);
+          console.log(data);
+
+          $.ajax({
+            type: 'POST',
+            headers: { 'content-type': 'application/json', "accept": "*/*", "Access-Control-Allow-Origin": "*" },
+            data: data,
+            url: 'https://rest-api-ag.azurewebsites.net/api/contracts',
+            success: function (data) {
+                alert('YOUR CONTRACT HAVE BEEN CREATED');
+            }
+        });
           // Execute adopt as a transaction by sending account
           return materialProviderInstance.calculMaterial($("#shafts").val(),$("#controllers").val(),$("#buttons").val(),$("#doors").val(),$("#displays").val(), {from: account})
         }).then(function(result) {

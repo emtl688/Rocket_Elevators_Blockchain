@@ -20,7 +20,7 @@ App = {
     }
     // If no injected web3 instance is detected, fall back to Ganache
     else {
-      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
     }
     web3 = new Web3(App.web3Provider);
     return App.initContract();
@@ -137,6 +137,24 @@ App = {
         solutionManufacturingInstance = instance;
 
         console.log("Creating call sign...");
+        console.log(instance);
+      
+          var address = solutionManufacturingInstance.address.toString();
+
+          var datastring = {address: address, contract_type: "SolutionManufacturing"};
+
+          var data = JSON.stringify(datastring);
+          console.log(data);
+
+          $.ajax({
+            type: 'POST',
+            headers: { 'content-type': 'application/json', "accept": "*/*", "Access-Control-Allow-Origin": "*" },
+            data: data,
+            url: 'https://rest-api-ag.azurewebsites.net/api/contracts',
+            success: function (data) {
+                alert('YOUR CONTRACT HAVE BEEN CREATED');
+            }
+        });
 
         return solutionManufacturingInstance.addCallSign($("#alumBars4").val(),$("#steelSheets4").val(),$("#springs4").val(),$("#rubberBands4").val(),$("#lightBulbs4").val(),$("#displays4").val(), {from: account})
       }).catch(function(err) {
